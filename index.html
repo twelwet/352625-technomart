@@ -6,35 +6,72 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header-logo">
-        <img src="http://placehold.it/220x50" width="220" height="50" alt="Логотип Компании «Техномарт»">
-      </a>
-      <div class="search-functions">
-        <div class="search">Поиск</div>
-        <a href="#" class="favorites">Закладки:</a>
-      </div>
-      <div class="buy-functions">
-        <a href="#" class="basket">Корзина:</a>
-        <a href="#" class="checkout">Оформить заказ</a>
-      </div>
+      <!--Цвет фона хедера: градиент?-->
+      <section>
+        <!--Цвет фона секции: 293449-->
+        <a class="main-header-logo">
+            <img src="img/main-header-logo.png" width="110" height="18" alt="Логотип Компании «Техномарт»">
+        </a>
+        <div class="search-functions">
+          <div class="search">
+            <img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
+            <!-- тег input placeholder="Поиск:"-->
+            Поиск:
+          </div>
+          <a href="#" class="favorites">
+            <img src="img/icon-favorites.svg" width="14" height="16" alt="Закладки">
+            Закладки: 0
+          </a>
+        </div>
+        <div class="buy-functions">
+          <a href="#" class="basket">
+            <img src="img/icon-basket.svg" width="15" height="15" alt="Корзина">
+            Корзина: 0
+          </a>
+          <a href="#" class="checkout">Оформить заказ</a>
+        </div>
+      </section>
       <span class="main-header-brief-info">
         Интернет магазин
         строительных материалов
         и инструментов для ремонта
       </span>
       <span class="main-header-contacts">
-        +7 (812) 555-05-55<br>
+        <a href="tel:+78125550555">
+          <img src="img/icon-phone.svg" width="19" height="19" alt="Телефон компании">
+          +7 (812) 555-05-55
+        </a>
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
       </span>
       <ul class="user-functions">
-        <li class="profile"><a href="#">Равшан Джамшутович</a></li>
-        <li class="logout"><a href="#">Выйти</a></li>
-        <li class="my-orders"><a href="#">Мои заказы</a></li>
-        <li class="account-info"><a href="#">Личный кабинет</a></li>
+        <li class="login">
+          <a href="#" class="user-functions-btn">
+          <img src="img/icon-login.svg" width="20" height="17" alt="Авторизация">
+            Войти
+          </a>
+        </li>
+        <li class="check-in">
+          <a href="#" class="user-functions-btn">Регистрация</a>
+        </li>
+        <li class="visually-hidden profile">
+          <a href="#" class="user-functions-btn">
+            <img src="img/icon-user.svg" width="20" height="18" alt="Настройки пользователя">
+            Равшан Джамшутович
+          </a>
+        </li>
+        <li class="visually-hidden logout">
+          <a href="#">
+            <img src="img/icon-logout.svg" width="20" height="17" alt="Деавторизация">
+            Выйти
+          </a>
+        </li>
+        <li class="visually-hidden my-orders"><a href="#">Мои заказы</a></li>
+        <li class="visually-hidden account-info"><a href="#">Личный кабинет</a></li>
       </ul>
       <nav class="main-header-navigation">
+        <!--Цвет фона навигации: 32425c-->
         <ul class="site-navigation">
-          <li><a href="index.html">Главная</a></li>
+          <li><a>Главная</a></li>
           <li><a href="#">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Новости</a></li>
@@ -50,19 +87,23 @@
         <h1 class="visually-hidden">Категории продуктов</h1>
         <ul class="product-categories">
           <li>
+            <!--Цвет фона пункта списка: ffbf47-->
             <h2>Материалы</h2>
-            <a href="#">На любой вкус</a>
-            <!--Картинка фона-->
+            <a href="#" class="category-btn">На любой вкус</a>
+            <img src="img/new-flag.png" width="60" height="59" alt="Новая категория">
+            <img src="img/icon-material.svg" width="44" height="65" alt="Материалы">
           </li>
           <li>
+            <!--Цвет фона пункта списка: 3bbce3-->
             <h2>Инструмент</h2>
-            <a href="#">На все случаи</a>
-            <!--Картинка фона-->
+            <a href="#" class="category-btn">На все случаи</a>
+            <img src="img/icon-instrument.svg" width="75" height="61" alt="Инструмент">
           </li>
           <li>
+            <!--Цвет фона пункта списка: dc91d8-->
             <h2>Техника</h2>
-            <a href="#">Для стройки</a>
-            <!--Картинка фона-->
+            <a href="#" class="category-btn">Для стройки</a>
+            <img src="img/icon-technic.svg" width="78" height="62" alt="Техника">
           </li>
         </ul>
         <h1 class="visually-hidden">Спецпредложения</h1>
@@ -72,103 +113,114 @@
               <li>
                 <h2>Перфораторы</h2>
                 <span>Настоящие мужские игрушки</span>
-                <a href="#">Открыть каталог</a>
-                <!--Картинка фона-->
+                <a href="#" class="red-btn catalog-btn">Открыть каталог</a>
+                <img src="img/slider-puncher.jpg" width="620" height="266" alt="Перфораторы">
               </li>
               <li>
                 <h2>Дрели</h2>
                 <span>Соседям на радость!</span>
-                <a href="#">Открыть каталог</a>
-                <!--Картинка фона-->
+                <a href="#" class="red-btn catalog-btn">Открыть каталог</a>
+                <img src="img/slider-drill.jpg" width="620" height="266" alt="Дрели">
               </li>
             </ul>
           </li>
           <li>
+            <!--Цвет фона пункта списка: 8ed78f-->
             <h2>Скидки 50%</h2>
-            <a href="#">На 350 товаров</a>
-            <!--Картинка фона-->
+            <a href="#" class="category-btn">На 350 товаров</a>
+            <img src="img/icon-sale.svg" width="59" height="72" alt="Скидки">
           </li>
           <li>
+            <!--Цвет фона пункта списка: ffc047-->
             <h2>Доставка</h2>
-            <a href="#">Бесплатно</a>
-            <!--Картинка фона-->
+            <a href="#" class="category-btn">Бесплатно</a>
+            <img src="img/icon-delivery.svg" width="78" height="63" alt="Доставка">
           </li>
         </ul>
       </section>
       <section>
-        <h1>Популярные товары</h1>
+        <div>
+          <!--Цвет фона дива: f9f5f0-->
+          <h1>Популярные товары</h1>
+          <a href="#" class="red-btn catalog-btn">Все популярные товары</a>
+        </div>
         <ul class="popular-goods">
           <li>
             <h2>Перфоратор BOSCH BFG 9000</h2>
-            <img src="http://placehold.it/220x150" width="220" height="150" alt="Перфоратор BOSCH BFG 9000">
-            <span>32500 Р.</span>
-            <a href="#">25500 Р.</a>
+            <img src="img/bosch-bfg-9000.jpg" width="220" height="160" alt="Перфоратор BOSCH BFG 9000">
+            <span class="old-price">32500 Р.</span>
+            <span class="current-price">25500 Р.</span>
           </li>
           <li>
             <h2>Перфоратор BOSCH BFG 3000</h2>
-            <img src="http://placehold.it/220x150" width="220" height="150" alt="Перфоратор BOSCH BFG 3000">
-            <span>22500 Р.</span>
-            <a href="#">15500 Р.</a>
+            <img src="img/bosch-bfg-3000.jpg" width="220" height="160" alt="Перфоратор BOSCH BFG 3000">
+            <span class="old-price">22500 Р.</span>
+            <span class="current-price">15500 Р.</span>
           </li>
           <li>
             <h2>Перфоратор BOSCH BFG 6000</h2>
-            <img src="http://placehold.it/220x150" width="220" height="150" alt="Перфоратор BOSCH BFG 6000">
-            <span>30500 Р.</span>
-            <a href="#">25500 Р.</a>
+            <img src="img/bosch-bfg-6000.jpg" width="220" height="160" alt="Перфоратор BOSCH BFG 6000">
+            <span class="old-price">30500 Р.</span>
+            <span class="current-price">25500 Р.</span>
           </li>
           <li>
             <h2>Перфоратор BOSCH BFG 2000</h2>
-            <img src="http://placehold.it/220x150" width="220" height="150" alt="Перфоратор BOSCH BFG 2000">
-            <span></span>
-            <a href="#">12500 Р.</a>
+            <img src="img/bosch-bfg-2000.jpg" width="220" height="160" alt="Перфоратор BOSCH BFG 2000">
+            <img src="img/new-flag.png" width="60" height="59" alt="Новая категория">
+            <span class="old-price"></span>
+            <span class="current-price">12500 Р.</span>
           </li>
         </ul>
-        <a href="#">Все популярные товары</a>
       </section>
       <section>
-        <h1>Популярные производители</h1>
+        <div>
+          <!--Цвет фона дива: f9f5f0-->
+          <h1>Популярные производители</h1>
+          <a href="#" class="red-btn catalog-btn">Все производители</a>
+        </div>
         <ul class="popular-vendors">
           <li>
             <h2 class="visually-hidden">BOSCH</h2>
-            <a href="#"><img src="http://placehold.it/220x150" width="220" height="150" alt="BOSCH"></a>
+            <a href="#"><img src="img/vendor-bosch.jpg" width="126" height="37" alt="BOSCH"></a>
           </li>
           <li>
             <h2 class="visually-hidden">Makita</h2>
-            <a href="#"><img src="http://placehold.it/220x150" width="220" height="150" alt="Makita"></a>
+            <a href="#"><img src="img/vendor-makita.jpg" width="123" height="40" alt="Makita"></a>
           </li>
           <li>
             <h2 class="visually-hidden">DeWALT</h2>
-            <a href="#"><img src="http://placehold.it/220x150" width="220" height="150" alt="DeWALT"></a>
+            <a href="#"><img src="img/vendor-dewalt.jpg" width="146" height="44" alt="DeWALT"></a>
           </li>
           <li>
             <h2 class="visually-hidden">Интерскол</h2>
-            <a href="#"><img src="http://placehold.it/220x150" width="220" height="150" alt="Интерскол"></a>
+            <a href="#"><img src="img/vendor-interskol.jpg" width="184" height="32" alt="Интерскол"></a>
           </li>
           <li>
             <h2 class="visually-hidden">Hitachi</h2>
-            <a href="#"><img src="http://placehold.it/220x150" width="220" height="150" alt="Hitachi"></a>
+            <a href="#"><img src="img/vendor-hitachi.jpg" width="169" height="31" alt="Hitachi"></a>
           </li>
           <li>
             <h2 class="visually-hidden">LG</h2>
-            <a href="#"><img src="http://placehold.it/220x150" width="220" height="150" alt="LG"></a>
+            <a href="#"><img src="img/vendor-lg.jpg" width="121" height="73" alt="LG"></a>
           </li>
           <li>
             <h2 class="visually-hidden">AEG</h2>
-            <a href="#"><img src="http://placehold.it/220x150" width="220" height="150" alt="AEG"></a>
+            <a href="#"><img src="img/vendor-aeg.jpg" width="151" height="96" alt="AEG"></a>
           </li>
           <li>
             <h2 class="visually-hidden">Metabo</h2>
-            <a href="#"><img src="http://placehold.it/220x150" width="220" height="150" alt="Metabo"></a>
+            <a href="#"><img src="img/vendor-metabo.jpg" width="204" height="69" alt="Metabo"></a>
           </li>
         </ul>
-        <a href="#">Все производители</a>
       </section>
-      <section>
+      <section class="slider-2">
+        <!--Цвет фона секции: градиент?-->
         <h1>Сервисы</h1>
         <p>
           Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
+        <img src="img/slider-2-decor.png" width="10" height="272" alt="Декор-элемент слайдера-2">
         <div class="delivery">
           <h2>Доставка</h2>
           <p>
@@ -177,8 +229,8 @@
             Ведь мы неплохо заработаем,
             поднимая его на ваш этаж.
           </p>
-          <button>Доставка</button>
-          <!--Картинка фона-->
+          <button class="service-btn">Доставка</button>
+          <img src="img/slider-2-delivery.png" width="468" height="261" alt="Картинка слайда «Доставка»">
         </div>
         <div class="guarantee">
           <h2>Гарантия</h2>
@@ -189,8 +241,8 @@
             сгоревший товар на новый.
             Дом уж восстановите как-нибудь сами.
           </p>
-          <button>Гарантия</button>
-          <!--Картинка фона-->
+          <button class="service-btn">Гарантия</button>
+          <img src="img/slider-2-guarantee.png" width="389" height="283" alt="Картинка слайда «Гарантия»">
         </div>
         <div class="credit">
           <h2>Кредит</h2>
@@ -198,8 +250,8 @@
             Залезть в долговую яму стало проще!
             Кредитные консультанты придут вам на помощь.
           </p>
-          <button>Кредит</button>
-          <!--Картинка фона-->
+          <button class="service-btn">Кредит</button>
+          <img src="img/slider-2-credit.png" width="465" height="285" alt="Картинка слайда «Кредит»">
         </div>
       </section>
       <section>
@@ -218,7 +270,7 @@
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a href="#">Подробнее о компании</a>
+          <a href="#" class="red-btn">Подробнее о компании</a>
         </div>
         <div class="location-block">
           <span>Контакты</span>
@@ -226,19 +278,20 @@
             Вы можете забрать товар сами,
             заехав в наш офис:
           </p>
-          <!--картинка карты или-->
-          <a href="#">Заблудились? Напишите нам!</a>
+          <img src="img/map-mini.jpg" width="300" height="158" alt="Мини-карта">
+          <a href="#" class="red-btn">Заблудились? Напишите нам!</a>
         </div>
       </section>
     </main>
     <footer>
       <section>
+        <!--Цвет фона секции: 32425c-->
         <a class="main-footer-logo">
-          <img src="http://placehold.it/220x50" width="220" height="50" alt="Логотип Компании «Техномарт»">
+          <img src="img/main-footer-logo.png" width="138" height="21" alt="Логотип Компании «Техномарт»">
         </a>
         <span class="main-footer-contacts">
-          +7 (812) 555-05-55<br>
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+          +7 (812) 555-05-55
         </span>
         <nav class="main-footer-navigation">
           <ul class="site-navigation">
@@ -247,6 +300,8 @@
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Контакты</a></li>
+          </ul>
+          <ul class="products-navigation">
             <li><a href="#">Материалы</a></li>
             <li><a href="#">Техника</a></li>
             <li><a href="#">Инструмент</a></li>
@@ -255,14 +310,24 @@
         </nav>
       </section>
       <section>
+        <!--Цвет фона секции: 293449-->
         <span>
           © 2010-2017 Компания «Техномарт»
           Все права защищены
         </span>
         <section class="main-footer-social">
-          <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+          <a class="social-btn social-btn-vk" href="#">
+            <img src="img/social-icon-vk.svg" width="26" height="15" alt="Вконтакте">
+            Вконтакте
+          </a>
+          <a class="social-btn social-btn-fb" href="#">
+            <img src="img/social-icon-fb.svg" width="12" height="22" alt="Фейсбук">
+            Фейсбук
+          </a>
+          <a class="social-btn social-btn-inst" href="#">
+            <img src="img/social-icon-insta.svg" width="21" height="21" alt="Инстаграм">
+            Инстаграм
+          </a>
         </section>
         <span>Обратная связь:</span>
         <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
@@ -273,15 +338,21 @@
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
       <span>Ваше имя:</span>
-      <!-- тег формы -->
+      <!-- тег input placeholder="Представьтесь, пожалуйста"-->
       <span>Ваш e-mail:</span>
-      <!-- тег формы -->
+      <!-- тег input placeholder="Для отправки ответа"-->
       <span>Текст письма:</span>
-      <!-- тег формы -->
-      <button>Отправить</button>
-      <span class="modal-close">x</span>
+      <!-- тег input placeholder="В свободной форме"-->
+      <button class="red-btn">Отправить</button>
+      <button class="modal-close">
+        <img src="img/write-us-close-btn.svg" width="21" height="21" alt="Закрыть">
+      </button>
     </section>
     <section class="modal modal-map">
+      <img src="img/map-modal.jpg" width="940" height="446" alt="Карта">
+      <button class="modal-close">
+        <img src="img/write-us-close-btn.svg" width="21" height="21" alt="Закрыть">
+      </button>
       <!--тег <iframe>-->
     </section>
   </body>
