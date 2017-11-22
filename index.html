@@ -3,20 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Главная - Компания «Техномарт»</title>
+    <!--[Вопрос] Валидатор ругается на знак '|' при подключении шрифтов,
+    подключить шрифты двумя отдельными ссылками?-->
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header class="main-header">
-      <!--Цвет фона хедера: клонирование области 100х100px-->
-      <section>
-        <!--Цвет фона секции: #293449-->
-        <a class="main-header-logo">
+      <section class="loft-section">
+        <a class="main-header-logo index-logo">
           <img src="img/main-header-logo.png" width="110" height="18" alt="Логотип Компании «Техномарт»">
         </a>
         <div class="search-functions">
           <form class="search" action="search.php" method="post">
             <label>
-              <svg version="1.1" x="0px" y="0px" width="17px" height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
-                <path fill="#000000" d="M17,15.586l-3.542-3.542C14.421,10.782,15,9.21,15,7.5C15,3.358,11.643,0,7.5,0C3.358,0,0,3.358,0,7.5
+              <svg fill="rgba(255, 255, 255, 0.3)" version="1.1" x="0px" y="0px" width="17px" height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
+                <path d="M17,15.586l-3.542-3.542C14.421,10.782,15,9.21,15,7.5C15,3.358,11.643,0,7.5,0C3.358,0,0,3.358,0,7.5
                   C0,11.643,3.358,15,7.5,15c1.71,0,3.282-0.579,4.544-1.542L15.586,17L17,15.586z M2,7.5C2,4.467,4.467,2,7.5,2
                   C10.532,2,13,4.467,13,7.5c0,3.032-2.468,5.5-5.5,5.5C4.467,13,2,10.532,2,7.5z"/>
               </svg>
@@ -24,8 +27,8 @@
             </label>
           </form>
           <a href="#" class="favorites">
-            <svg version="1.1" x="0px" y="0px" width="14px" height="16px" viewBox="0 0 14 16" enable-background="new 0 0 14 16" xml:space="preserve">
-              <path fill="#000000" d="M14,15c0,0.55-0.368,0.741-0.818,0.426l-5.363-3.765c-0.45-0.315-1.187-0.315-1.637,0l-5.364,3.765
+            <svg fill="rgba(255, 255, 255, 0.3)" version="1.1" x="0px" y="0px" width="14px" height="16px" viewBox="0 0 14 16" enable-background="new 0 0 14 16" xml:space="preserve">
+              <path d="M14,15c0,0.55-0.368,0.741-0.818,0.426l-5.363-3.765c-0.45-0.315-1.187-0.315-1.637,0l-5.364,3.765
                 C0.368,15.741,0,15.55,0,15V1c0-0.55,0.45-1,1-1h12c0.55,0,1,0.45,1,1V15z"/>
             </svg>
             Закладки: 0
@@ -33,10 +36,10 @@
         </div>
         <div class="buy-functions">
           <a href="#" class="basket">
-            <svg version="1.1" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
-              <circle fill="#000000" cx="4.5" cy="13.5" r="1.5"/>
-            	<circle fill="#000000" cx="12.5" cy="13.5" r="1.5"/>
-            	<polygon fill="#000000" points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951"/>
+            <svg fill="rgba(255, 255, 255, 0.3)" version="1.1" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
+              <circle cx="4.5" cy="13.5" r="1.5"/>
+            	<circle cx="12.5" cy="13.5" r="1.5"/>
+            	<polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951"/>
             </svg>
             Корзина: 0
           </a>
@@ -48,10 +51,10 @@
         строительных материалов
         и инструментов для ремонта
       </span>
-      <span class="main-header-contacts">
+      <div class="main-header-contacts">
         <a href="tel:+78125550555">
-          <svg version="1.1" x="0px" y="0px" width="19px" height="19px" viewBox="0 0 19 19" enable-background="new 0 0 19 19" xml:space="preserve">
-            <path fill="#000000" d="M15.572,18.985c-0.312,0-0.629,0-0.941,0c-4.129-0.488-7.157-2.408-9.359-4.864
+          <svg fill="rgb(183, 191, 200)" version="1.1" x="0px" y="0px" width="19px" height="19px" viewBox="0 0 19 19" enable-background="new 0 0 19 19" xml:space="preserve">
+            <path d="M15.572,18.985c-0.312,0-0.629,0-0.941,0c-4.129-0.488-7.157-2.408-9.359-4.864
               c-2.21-2.461-3.954-5.629-4.294-9.893c0-0.382,0-0.762,0-1.144C1.056,2.31,1.437,1.78,1.876,1.327
               C2.425,0.766,3.25,0.044,4.002,0.019c0.554-0.018,1.5,0.38,1.879,0.899C6.21,1.364,6.385,2.257,6.537,2.921
               c0.154,0.671,0.505,1.643,0.408,2.289C6.797,6.217,5.458,6.644,5.066,7.376c1.307,3.135,3.443,5.439,6.293,7.031
@@ -60,14 +63,16 @@
           </svg>
           +7 (812) 555-05-55
         </a>
-        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-      </span>
+        <span class="address">
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        </span>
+      </div>
       <ul class="user-functions">
         <li class="login">
           <a href="#" class="user-functions-btn">
-            <svg version="1.1" x="0px" y="0px" width="20px" height="17px" viewBox="0 0 20 17" enable-background="new 0 0 20 17" xml:space="preserve">
-              <polygon fill="#000000" points="14.875,8.5 6,0 6,6 0,6 0,11 6,11 6,17 	"/>
-              <path fill="#000000" d="M16.986,15.01h-5.027V17h5.027c2.178,0,3.004-1.81,3.029-3.026V3.028C19.99,1.811,19.164,0,16.986,0h-5.027
+            <svg fill="rgb(197, 197, 197)" version="1.1" x="0px" y="0px" width="20px" height="17px" viewBox="0 0 20 17" enable-background="new 0 0 20 17" xml:space="preserve">
+              <polygon points="14.875,8.5 6,0 6,6 0,6 0,11 6,11 6,17 	"/>
+              <path d="M16.986,15.01h-5.027V17h5.027c2.178,0,3.004-1.81,3.029-3.026V3.028C19.99,1.811,19.164,0,16.986,0h-5.027
                 v1.99h5.027c0.839,0,0.992,0.681,1.01,1.057v10.904C17.979,14.327,17.825,15.01,16.986,15.01z"/>
             </svg>
             Войти
@@ -78,9 +83,8 @@
         </li>
       </ul>
       <nav class="main-header-navigation">
-        <!--Цвет фона навигации: #32425c-->
-        <ul class="site-navigation">
-          <li><a>Главная</a></li>
+        <ul class="site">
+          <li><a class="active">Главная</a></li>
           <li><a href="#">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Новости</a></li>
@@ -95,32 +99,30 @@
       <section>
         <h1 class="visually-hidden">Категории продуктов</h1>
         <ul class="product-categories">
-          <li>
-            <!--Цвет фона пункта списка: #ffbf47-->
+          <li class="material">
+            <div class="new-flag-container"></div>
             <h2>Материалы</h2>
             <a href="#" class="category-btn">На любой вкус</a>
-            <img src="img/new-flag.png" width="60" height="59" alt="Новая категория">
-            <svg version="1.1" x="0px" y="0px" width="44px" height="65px" viewBox="0 0 44 65" enable-background="new 0 0 44 65" xml:space="preserve">
-            	<path fill="#000000" d="M37.91,30.438v10.869c0,0,0.105,2.735-2.825,2.735c-3.069,0-3.125-2.735-3.125-2.735s0-6.176,0-6.416
+            <svg fill="rgb(0, 0, 0)" version="1.1" x="0px" y="0px" width="44px" height="65px" viewBox="0 0 44 65" enable-background="new 0 0 44 65" xml:space="preserve">
+            	<path d="M37.91,30.438v10.869c0,0,0.105,2.735-2.825,2.735c-3.069,0-3.125-2.735-3.125-2.735s0-6.176,0-6.416
             		s-0.336-1.909-2.319-1.909c-2.625,0-2.67,1.877-2.67,1.877V54.08c0,0,0.029,1.863-2.464,1.863C22,55.943,22,53.96,22,53.96V40.016
             		c0,0,0-2.945-3.805-2.945c-4.054,0-3.967,3.125-3.967,3.125v3.728c0,0-0.121,2.945-4.688,2.945s-4.628-4.509-4.628-4.509V29.938
             		C3.168,28.976,0,26.671,0,26.671v29.332C0,56.003,2.988,65,22,65c19.012,0,22-8.695,22-8.695V26.671
             		C41.062,29.5,37.91,30.438,37.91,30.438z"/>
-            	<path fill="#000000" d="M22,0C1.688,0,0,19.875,0,19.875v3.062C8.438,29.188,22,29,22,29s13.562,0.188,22-6.062v-3.062
+            	<path d="M22,0C1.688,0,0,19.875,0,19.875v3.062C8.438,29.188,22,29,22,29s13.562,0.188,22-6.062v-3.062
             		C44,19.875,42.312,0,22,0z M22,25c-11.75,0-14.312-2.375-14.312-2.375C13.938,19.75,22,19.875,22,19.875s8.062-0.125,14.312,2.75
             		C36.312,22.625,33.75,25,22,25z M22,12.625c-9.562,0-17.688,2.938-17.688,2.938C8.875,2.625,22,3.062,22,3.062
             		s13.125-0.438,17.688,12.5C39.688,15.562,31.562,12.625,22,12.625z"/>
             </svg>
           </li>
-          <li>
-            <!--Цвет фона пункта списка: #3bbce3-->
+          <li class="instrument">
             <h2>Инструмент</h2>
             <a href="#" class="category-btn">На все случаи</a>
-            <svg version="1.1" x="0px" y="0px" width="75px" height="61px" viewBox="0 0 75 61" enable-background="new 0 0 75 61" xml:space="preserve">
-              <path fill="#000000" d="M5.039,58.949c0,0,0,2.051,1.868,2.051s27.02,0,27.02,0s2.001-0.184,2.001-1.984s0-11.074,0-11.074H5.039 V58.949z"/>
-            	<path fill="#000000" d="M73.875,8.016H60.387c-0.621-2.287-2.071-3.891-3.762-3.891h-7.542v12.75h7.542
+            <svg fill="rgb(0, 0, 0)" version="1.1" x="0px" y="0px" width="75px" height="61px" viewBox="0 0 75 61" enable-background="new 0 0 75 61" xml:space="preserve">
+              <path d="M5.039,58.949c0,0,0,2.051,1.868,2.051s27.02,0,27.02,0s2.001-0.184,2.001-1.984s0-11.074,0-11.074H5.039 V58.949z"/>
+            	<path d="M73.875,8.016H60.387c-0.621-2.287-2.071-3.891-3.762-3.891h-7.542v12.75h7.542
             		c1.69,0,3.141-1.604,3.762-3.891h13.488c0.575,0,1.042-1.112,1.042-2.484S74.45,8.016,73.875,8.016z"/>
-            	<path fill="#000000" d="M2.103,0C0.167,0,0,2.041,0,2.041s0,12.876,0,15.812s2.903,3.002,2.903,3.002s7.072,0,9.007,0
+            	<path d="M2.103,0C0.167,0,0,2.041,0,2.041s0,12.876,0,15.812s2.903,3.002,2.903,3.002s7.072,0,9.007,0
             		s1.601,1.334,1.601,1.334s-2.469,13.01-2.735,15.211c-0.267,2.203-1.868,3.604-1.868,3.604s-2.135,1.201-3.002,1.668
             		s-0.867,2.201-0.867,2.201h30.889v-0.734c0-1.467-6.472-3.135-9.073-3.402c-2.602-0.266-2.068-2.002-2.068-2.002l1.067-7.805
             		h3.002l1.134-7.873h-3.002l0.331-2.737l8.609-0.131c5.805-0.601,10.008-4.07,10.008-4.07V4.109C41.333,0.84,33.993,0,33.993,0
@@ -128,18 +130,17 @@
             		C35.55,3.938,36,4.388,36,4.938z"/>
             </svg>
           </li>
-          <li>
-            <!--Цвет фона пункта списка: #dc91d8-->
+          <li class="technic">
             <h2>Техника</h2>
             <a href="#" class="category-btn">Для стройки</a>
-            <svg version="1.1" x="0px" y="0px" width="78px" height="62px" viewBox="0 0 78 62" enable-background="new 0 0 78 62" xml:space="preserve">
-          	  <path fill="#000000" d="M16.125,29.749C7.22,29.749,0,36.968,0,45.875C0,54.78,7.22,62,16.125,62s16.125-7.22,16.125-16.125
+            <svg fill="rgb(0, 0, 0)" version="1.1" x="0px" y="0px" width="78px" height="62px" viewBox="0 0 78 62" enable-background="new 0 0 78 62" xml:space="preserve">
+          	  <path d="M16.125,29.749C7.22,29.749,0,36.968,0,45.875C0,54.78,7.22,62,16.125,62s16.125-7.22,16.125-16.125
             	  C32.251,36.968,25.031,29.749,16.125,29.749z M16.125,53.182c-4.036,0-7.307-3.271-7.307-7.307c0-4.037,3.271-7.308,7.307-7.308
             		s7.307,3.271,7.307,7.308C23.433,49.91,20.162,53.182,16.125,53.182z"/>
-            	<path fill="#000000" d="M60.854,45.874c-4.453,0-8.062,3.61-8.062,8.062c0,4.453,3.609,8.063,8.062,8.063s8.062-3.61,8.062-8.063
+            	<path d="M60.854,45.874c-4.453,0-8.062,3.61-8.062,8.062c0,4.453,3.609,8.063,8.062,8.063s8.062-3.61,8.062-8.063
             		C68.917,49.484,65.308,45.874,60.854,45.874z M60.854,59c-2.796,0-5.062-2.268-5.062-5.063c0-2.795,2.267-5.062,5.062-5.062
             		s5.062,2.268,5.062,5.062C65.917,56.732,63.65,59,60.854,59z"/>
-            	<path fill="#000000" d="M77.898,49.727c0,0-2.023-15.102-2.461-18.414c-0.547-4.141-3.625-4.688-3.625-4.688L66,25.946V14h-3v5.833
+            	<path d="M77.898,49.727c0,0-2.023-15.102-2.461-18.414c-0.547-4.141-3.625-4.688-3.625-4.688L66,25.946V14h-3v5.833
             		h-4v5.295L47.188,23.75c0,0-9.75-20.062-10.562-21.875S33.5,0,33.5,0S11.125,2.375,8.75,3S5.312,6.167,5.312,6.167
             		c-2.308,6.37-2.311,17.296-2.266,20.255c3.736-2.517,8.236-3.986,13.079-3.986c12.944,0,23.438,10.493,23.438,23.439
             		c0,2.438-0.373,4.789-1.064,7h10.164c0.39-6.402,5.69-11.479,12.191-11.479s11.802,5.077,12.191,11.479H75
@@ -152,46 +153,42 @@
         <ul class="special-offers">
           <li>
             <ul class="slider">
-              <li>
-                <h2>Перфораторы</h2>
+              <li class="puncher">
+                <h3>Перфораторы</h3>
                 <span>Настоящие мужские игрушки</span>
                 <a href="catalog.html" class="red-btn catalog-btn">Открыть каталог</a>
-                <img src="img/slider-puncher.jpg" width="620" height="266" alt="Перфораторы">
               </li>
-              <li>
-                <h2>Дрели</h2>
+              <li class="drill">
+                <h3>Дрели</h3>
                 <span>Соседям на радость!</span>
                 <a href="#" class="red-btn catalog-btn">Открыть каталог</a>
-                <img src="img/slider-drill.jpg" width="620" height="266" alt="Дрели">
               </li>
             </ul>
           </li>
-          <li>
-            <!--Цвет фона пункта списка: #8ed78f-->
+          <li class="sale">
             <h2>Скидки 50%</h2>
             <a href="#" class="category-btn">На 350 товаров</a>
-            <svg version="1.1" x="0px" y="0px" width="59px" height="72px" viewBox="0 0 59 72" enable-background="new 0 0 59 72" xml:space="preserve">
-              <path fill="#000000" d="M58.34,20.545c-0.566-0.753-1.454-1.195-2.396-1.195H17.274l-2.475-7.385H3.058c-1.657,0-3,1.343-3,3
+            <svg fill="rgb(0, 0, 0)" version="1.1" x="0px" y="0px" width="59px" height="72px" viewBox="0 0 59 72" enable-background="new 0 0 59 72" xml:space="preserve">
+              <path d="M58.34,20.545c-0.566-0.753-1.454-1.195-2.396-1.195H17.274l-2.475-7.385H3.058c-1.657,0-3,1.343-3,3
             		s1.343,3,3,3h7.424l13.5,40.285h25.159c1.657,0,3-1.343,3-3s-1.343-3-3-3H28.299l-1.726-5.149h23.12
             		c1.338,0,2.514-0.886,2.884-2.172l6.25-21.75C59.087,22.273,58.906,21.298,58.34,20.545z M50.559,30.226h-4.81V25.35h6.211
             		L50.559,30.226z M32.942,30.226V25.35h6.807v4.875H32.942z M39.749,36.226v4.875h-6.807v-4.875H39.749z M26.942,25.35v4.875h-6.023
             		l-1.634-4.875H26.942z M22.929,36.226h4.013v4.875h-2.379L22.929,36.226z M45.749,41.101v-4.875h3.086l-1.401,4.875H45.749z"/>
-            	<circle fill="#000000" cx="27.406" cy="66.094" r="5.781"/>
-            	<circle fill="#000000" cx="44.844" cy="66.094" r="5.781"/>
-            	<path fill="#000000" d="M29.335,9.699l7.547,5.492c0.914,0.665,2.174,0.441,2.818-0.494c0.646-0.936,0.43-2.232-0.48-2.895
+            	<circle cx="27.406" cy="66.094" r="5.781"/>
+            	<circle cx="44.844" cy="66.094" r="5.781"/>
+            	<path d="M29.335,9.699l7.547,5.492c0.914,0.665,2.174,0.441,2.818-0.494c0.646-0.936,0.43-2.232-0.48-2.895
             		l-2.373-1.726l9.436-5.09L50.911,17h4.347L49.214,1.309c-0.211-0.548-0.64-0.978-1.177-1.183c-0.536-0.205-1.135-0.166-1.643,0.109
             		L33.146,7.382l-3.022-2.199c-0.872-0.634-2.071-0.462-2.742,0.39l-8.481,10.798c-0.169,0.181-0.305,0.395-0.405,0.628h5.106
             		L29.335,9.699z"/>
             </svg>
           </li>
-          <li>
-            <!--Цвет фона пункта списка: #ffc047-->
+          <li class="delivery">
             <h2>Доставка</h2>
             <a href="#" class="category-btn">Бесплатно</a>
-            <svg version="1.1" x="0px" y="0px" width="78px" height="63px" viewBox="0 0 78 63" enable-background="new 0 0 78 63" xml:space="preserve">
-            	<circle fill="#000000" cx="25.983" cy="55.5" r="7.5"/>
-            	<circle fill="#000000" cx="59.982" cy="55.5" r="7.5"/>
-            	<path fill="#000000" d="M64,0c0,0-49.75,0-52.938,0s-3,3.125-3,3.125V8H3.469C1.553,8,0,9.553,0,11.469s1.553,3.469,3.469,3.469
+            <svg fill="rgb(0, 0, 0)" version="1.1" x="0px" y="0px" width="78px" height="63px" viewBox="0 0 78 63" enable-background="new 0 0 78 63" xml:space="preserve">
+            	<circle cx="25.983" cy="55.5" r="7.5"/>
+            	<circle cx="59.982" cy="55.5" r="7.5"/>
+            	<path d="M64,0c0,0-49.75,0-52.938,0s-3,3.125-3,3.125V8H3.469C1.553,8,0,9.553,0,11.469s1.553,3.469,3.469,3.469
             		l28.085,1.84l0.196,0.043c-0.761,3.197-8.938,3.805-8.938,3.805l-8.31,0.428H5.446c-1.864,0-3.375,1.511-3.375,3.375
             		s1.511,3.375,3.375,3.375l23.656,1.254c-0.807,3.153-6.29,3.756-6.29,3.756l-14.751,0.76c0,7.64,0,14.353,0,15.615
             		c0,3.188,2.564,3.812,2.564,3.812h2.099c1.173-6.261,6.659-11,13.259-11s12.085,4.739,13.259,11h7.404
@@ -201,47 +198,41 @@
           </li>
         </ul>
       </section>
-      <section>
+      <section class="popular-goods">
         <div>
-          <!--Цвет фона дива: #f9f5f0-->
           <h1>Популярные товары</h1>
           <a href="#" class="red-btn catalog-btn">Все популярные товары</a>
         </div>
-        <ul class="popular-goods">
-          <li>
+        <ul>
+          <li class="bosch-bfg-9000">
             <h2>Перфоратор BOSCH BFG 9000</h2>
-            <img src="img/bosch-bfg-9000.jpg" width="220" height="160" alt="Перфоратор BOSCH BFG 9000">
             <span class="old-price">32500 Р.</span>
             <span class="current-price">25500 Р.</span>
           </li>
-          <li>
+          <li class="bosch-bfg-3000">
             <h2>Перфоратор BOSCH BFG 3000</h2>
-            <img src="img/bosch-bfg-3000.jpg" width="220" height="160" alt="Перфоратор BOSCH BFG 3000">
             <span class="old-price">22500 Р.</span>
             <span class="current-price">15500 Р.</span>
           </li>
-          <li>
+          <li class="bosch-bfg-6000">
             <h2>Перфоратор BOSCH BFG 6000</h2>
-            <img src="img/bosch-bfg-6000.jpg" width="220" height="160" alt="Перфоратор BOSCH BFG 6000">
             <span class="old-price">30500 Р.</span>
             <span class="current-price">25500 Р.</span>
           </li>
-          <li>
+          <li class="bosch-bfg-2000">
+            <div class="new-flag-container"></div>
             <h2>Перфоратор BOSCH BFG 2000</h2>
-            <img src="img/bosch-bfg-2000.jpg" width="220" height="160" alt="Перфоратор BOSCH BFG 2000">
-            <img src="img/new-flag.png" width="60" height="59" alt="Новая категория">
             <span class="old-price"></span>
             <span class="current-price">12500 Р.</span>
           </li>
         </ul>
       </section>
-      <section>
+      <section class="popular-vendors">
         <div>
-          <!--Цвет фона дива: #f9f5f0-->
           <h1>Популярные производители</h1>
           <a href="#" class="red-btn catalog-btn">Все производители</a>
         </div>
-        <ul class="popular-vendors">
+        <ul>
           <li>
             <h2 class="visually-hidden">BOSCH</h2>
             <a href="#"><img src="img/vendor-bosch.jpg" width="126" height="37" alt="BOSCH"></a>
@@ -276,14 +267,17 @@
           </li>
         </ul>
       </section>
-      <section class="slider-2">
-        <!--Цвет фона секции: клонирование области 100х100px-->
+      <section class="services slider-2">
         <h1>Сервисы</h1>
         <p>
           Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
-        <img src="img/slider-2-decor.png" width="10" height="272" alt="Декор-элемент слайдера-2">
+        <div class="btn-container">
+          <button class="service-btn delivery-btn" disabled>Доставка</button>
+          <button class="service-btn guarantee-btn">Гарантия</button>
+          <button class="service-btn credit-btn">Кредит</button>
+        </div>
         <div class="delivery">
           <h2>Доставка</h2>
           <p>
@@ -292,8 +286,6 @@
             Ведь мы неплохо заработаем,
             поднимая его на ваш этаж.
           </p>
-          <button class="service-btn">Доставка</button>
-          <img src="img/slider-2-delivery.png" width="468" height="261" alt="Картинка слайда «Доставка»">
         </div>
         <div class="guarantee">
           <h2>Гарантия</h2>
@@ -304,8 +296,6 @@
             сгоревший товар на новый.
             Дом уж восстановите как-нибудь сами.
           </p>
-          <button class="service-btn">Гарантия</button>
-          <img src="img/slider-2-guarantee.png" width="389" height="283" alt="Картинка слайда «Гарантия»">
         </div>
         <div class="credit">
           <h2>Кредит</h2>
@@ -313,8 +303,6 @@
             Залезть в долговую яму стало проще!
             Кредитные консультанты придут вам на помощь.
           </p>
-          <button class="service-btn">Кредит</button>
-          <img src="img/slider-2-credit.png" width="465" height="285" alt="Картинка слайда «Кредит»">
         </div>
       </section>
       <section>
@@ -346,10 +334,9 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="main-footer">
       <section>
-        <!--Цвет фона секции: #32425c-->
-        <a class="main-footer-logo">
+        <a class="main-footer-logo index-logo">
           <img src="img/main-footer-logo.png" width="138" height="21" alt="Логотип Компании «Техномарт»">
         </a>
         <span class="main-footer-contacts">
@@ -357,14 +344,14 @@
           +7 (812) 555-05-55
         </span>
         <nav class="main-footer-navigation">
-          <ul class="site-navigation">
+          <ul class="site">
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
-          <ul class="products-navigation">
+          <ul class="products">
             <li><a href="#">Материалы</a></li>
             <li><a href="#">Техника</a></li>
             <li><a href="#">Инструмент</a></li>
@@ -372,16 +359,15 @@
           </ul>
         </nav>
       </section>
-      <section>
-        <!--Цвет фона секции: #293449-->
-        <span>
+      <section class="cellar-section">
+        <span class="copyright">
           © 2010-2017 Компания «Техномарт»
           Все права защищены
         </span>
         <section class="main-footer-social">
           <a class="social-btn social-btn-vk" href="#">
-            <svg version="1.1" x="0px" y="0px" width="26px" height="15px" viewBox="0 0 26 15" enable-background="new 0 0 26 15" xml:space="preserve">
-              <path fill="#000000" d="M16.138,11.51c0.956-0.309,2.18,2.04,3.483,2.939c0.978,0.681,1.727,0.534,1.727,0.534l3.473-0.05
+            <svg fill="rgb(255, 255, 255)" version="1.1" x="0px" y="0px" width="26px" height="15px" viewBox="0 0 26 15" enable-background="new 0 0 26 15" xml:space="preserve">
+              <path d="M16.138,11.51c0.956-0.309,2.18,2.04,3.483,2.939c0.978,0.681,1.727,0.534,1.727,0.534l3.473-0.05
             	  c0,0,1.815-0.112,0.957-1.554c-0.071-0.12-0.503-1.069-2.585-3.022c-2.177-2.043-1.882-1.712,0.739-5.244
             	  c1.597-2.153,2.236-3.468,2.036-4.028c-0.192-0.539-1.365-0.399-1.365-0.399L20.69,0.713c-0.381,0.001-0.704,0.119-0.851,0.515
             	  c-0.003,0.004-0.621,1.666-1.445,3.079c-1.741,2.989-2.436,3.148-2.724,2.961c-0.661-0.433-0.494-1.737-0.494-2.664
@@ -395,31 +381,35 @@
             <span class="visually-hidden">Вконтакте</span>
           </a>
           <a class="social-btn social-btn-fb" href="#">
-            <svg version="1.1" x="0px" y="0px" width="12px" height="22px" viewBox="0 0 12 22" enable-background="new 0 0 12 22" xml:space="preserve">
-              <path fill="#000000" d="M12,4V0H8C5.791,0,4,1.791,4,4v4H0v4h4v10h4V12h4V8H8V4H12z"/>
+            <svg fill="rgb(255, 255, 255)" version="1.1" x="0px" y="0px" width="12px" height="22px" viewBox="0 0 12 22" enable-background="new 0 0 12 22" xml:space="preserve">
+              <path d="M12,4V0H8C5.791,0,4,1.791,4,4v4H0v4h4v10h4V12h4V8H8V4H12z"/>
             </svg>
             <span class="visually-hidden">Фейсбук</span>
           </a>
           <a class="social-btn social-btn-inst" href="#">
-            <svg version="1.1" x="0px" y="0px" width="21px" height="21px" viewBox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve">
-              <path fill="#000000" d="M18,0H3C1.35,0,0,1.35,0,3v15c0,1.65,1.35,3,3,3h15c1.65,0,3-1.35,3-3V3C21,1.35,19.65,0,18,0z M10.5,7
+            <svg fill="rgb(255, 255, 255)" version="1.1" x="0px" y="0px" width="21px" height="21px" viewBox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve">
+              <path d="M18,0H3C1.35,0,0,1.35,0,3v15c0,1.65,1.35,3,3,3h15c1.65,0,3-1.35,3-3V3C21,1.35,19.65,0,18,0z M10.5,7
                 c1.93,0,3.5,1.57,3.5,3.5S12.43,14,10.5,14S7,12.43,7,10.5S8.57,7,10.5,7z M18,18H3V9h1.181C4.067,9.482,4,9.983,4,10.5
                 c0,3.59,2.91,6.5,6.5,6.5s6.5-2.91,6.5-6.5c0-0.517-0.066-1.018-0.181-1.5H18V18z M18,7h-4V3h4V7z"/>
             </svg>
             <span class="visually-hidden">Инстаграм</span>
           </a>
         </section>
-        <span>Обратная связь:</span>
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        <span>Разработано - </span>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        <div class="feedback">
+          <span>Обратная связь:</span>
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </div>
+        <div class="developed-by">
+          <span>Разработано - </span>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        </div>
       </section>
     </footer>
     <section class="modal modal-feedback">
       <button class="modal-feedback-close">
         <!--Позже реализую крестик на css-->
-        <svg version="1.1" x="0px" y="0px" width="21px" height="21px" viewBox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve">
-          <path fill="#EE3643" d="M13.273,10.5l7.422-7.422c0.389-0.389,0.389-1.025,0-1.414l-1.359-1.359c-0.389-0.389-1.025-0.389-1.414,0
+        <svg fill="rgb(17, 201, 188)" version="1.1" x="0px" y="0px" width="21px" height="21px" viewBox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve">
+          <path d="M13.273,10.5l7.422-7.422c0.389-0.389,0.389-1.025,0-1.414l-1.359-1.359c-0.389-0.389-1.025-0.389-1.414,0
             L10.5,7.727L3.078,0.305c-0.389-0.389-1.025-0.389-1.414,0L0.305,1.664c-0.389,0.389-0.389,1.025,0,1.414L7.727,10.5l-7.421,7.422
             c-0.389,0.389-0.389,1.025,0,1.414l1.359,1.359c0.389,0.389,1.025,0.389,1.414,0l7.422-7.422l7.422,7.422
             c0.389,0.389,1.025,0.389,1.414,0l1.359-1.359c0.389-0.389,0.389-1.025,0-1.414L13.273,10.5z"/>
@@ -445,8 +435,8 @@
     <section class="modal modal-map">
       <button class="modal-map-close">
         <!--Позже реализую крестик на css-->
-        <svg version="1.1" x="0px" y="0px" width="21px" height="21px" viewBox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve">
-          <path fill="#EE3643" d="M13.273,10.5l7.422-7.422c0.389-0.389,0.389-1.025,0-1.414l-1.359-1.359c-0.389-0.389-1.025-0.389-1.414,0
+        <svg fill="rgb(238, 54, 67)" version="1.1" x="0px" y="0px" width="21px" height="21px" viewBox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve">
+          <path d="M13.273,10.5l7.422-7.422c0.389-0.389,0.389-1.025,0-1.414l-1.359-1.359c-0.389-0.389-1.025-0.389-1.414,0
             L10.5,7.727L3.078,0.305c-0.389-0.389-1.025-0.389-1.414,0L0.305,1.664c-0.389,0.389-0.389,1.025,0,1.414L7.727,10.5l-7.421,7.422
             c-0.389,0.389-0.389,1.025,0,1.414l1.359,1.359c0.389,0.389,1.025,0.389,1.414,0l7.422-7.422l7.422,7.422
             c0.389,0.389,1.025,0.389,1.414,0l1.359-1.359c0.389-0.389,0.389-1.025,0-1.414L13.273,10.5z"/>

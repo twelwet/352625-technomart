@@ -1,0 +1,926 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.main-header {
+  background-color: rgb(243, 247, 249);
+  background-image: url('../img/gray-background.jpg');
+}
+
+.main-header ul {
+  list-style: none;
+}
+
+.main-header .loft-section {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  background-color: rgb(41, 52, 73);
+}
+
+.loft-section a {
+  color: rgb(255, 255, 255);
+}
+
+.loft-section .main-header-logo {
+  display: block;
+  width: 110px;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 13px;
+  padding-bottom: 7px;
+  background-color: rgb(238, 54, 67);
+  border-bottom: 5px solid rgb(181, 41, 51);
+}
+
+.loft-section .main-header-logo:hover,
+.loft-section .main-header-logo:focus {
+  background-color: rgb(202, 44, 55);
+  border-bottom: 5px solid rgb(154, 33, 42);
+}
+
+.loft-section .main-header-logo:active {
+  background-color: rgb(186, 39, 50);
+  border-bottom: 5px solid rgb(142, 30, 38);
+}
+
+.main-header .index-logo:hover,
+.main-header .index-logo:focus,
+.main-header .index-logo:active,
+.main-footer .index-logo:hover,
+.main-footer .index-logo:focus,
+.main-footer .index-logo:active {
+  background-color: rgb(238, 54, 67);
+  border-bottom: 5px solid rgb(181, 41, 51);
+}
+
+.loft-section .search input {
+  background-color: inherit;
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  border: none;
+}
+
+/* Это правило не работает: */
+.loft-section .search input:active {
+  background-color: rgb(255, 255, 255);
+}
+/*[Вопрос] Подскажи как добиться белого фона input, окрашивания
+иконки поиска в красный цвет, когда курсор в поле ввода? */
+
+.loft-section .search input::-webkit-input-placeholder {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+
+.loft-section .search input::selection {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.loft-section .favorites:hover,
+.loft-section .favorites:focus,
+.loft-section .basket:hover,
+.loft-section .basket:focus,
+.loft-section .search:hover,
+.loft-section .search:focus {
+  background-color: rgb(33, 42, 58);
+}
+
+.loft-section .favorites:hover svg,
+.loft-section .favorites:focus svg,
+.loft-section .basket:hover svg,
+.loft-section .basket:focus svg,
+.loft-section .search:hover svg,
+/* Это правило не работает: */
+.loft-section .search:focus svg {
+  fill: rgba(255, 255, 255, 1);
+  /* [Вопрос] Как написать css-правило:
+  'если .search input:focus, то
+  .search:focus svg {fill: rgba(255, 255, 255, 1)}'?
+  Может подключить svg внешним файлом фона? */
+}
+
+.loft-section .favorites:active,
+.loft-section .basket:active {
+  background-color: rgb(22, 29, 41);
+  /* [Вопрос] Как сделать прозрачность только тексту ссылки,
+  исключая тег svg внутри этой ссылки?
+  Может подключить svg внешним файлом фона? */
+  opacity: 0.6;
+}
+
+.loft-section .favorites:active svg,
+.loft-section .basket:active svg {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+.buy-functions .checkout {
+  display: block;
+  width: 108px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: rgb(99, 166, 62);
+}
+
+.buy-functions .checkout:hover,
+.buy-functions .checkout:focus {
+  background-color: rgb(95, 187, 45);
+}
+
+.buy-functions .checkout:active {
+  opacity: 0.51;
+}
+
+.main-header-brief-info {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  font-style: italic;
+  color: rgb(238, 54, 67);
+}
+
+.main-header-contacts a {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 21px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(238, 54, 67);
+}
+
+.main-header-contacts .address {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgb(50, 66, 92);
+}
+
+.user-functions-btn {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 21px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.my-orders,
+.account-info {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(50, 66, 92);
+  text-decoration: underline;
+}
+
+.user-functions-btn:hover,
+.user-functions-btn:focus,
+.my-orders a:hover,
+.my-orders a:focus,
+.account-info a:hover,
+.account-info a:focus {
+  color: rgb(238, 54, 67);
+}
+
+.user-functions-btn:hover svg,
+.user-functions-btn:focus svg {
+  fill: rgb(50, 66, 92);
+}
+
+.user-functions-btn:active,
+.my-orders a:active,
+.account-info a:active {
+  color: rgb(0, 0, 0);
+  opacity: 0.3;
+}
+
+.main-header-navigation ul,
+.main-footer-navigation ul {
+  background-color: rgb(50, 66, 92);
+}
+
+.main-header-navigation ul a,
+.main-footer-navigation ul a {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+
+.main-footer-navigation .products a {
+  color: rgb(255, 209, 128);
+}
+
+.main-header-navigation ul a:hover,
+.main-header-navigation ul a:focus {
+  background-color: rgb(41, 52, 73);
+}
+
+.main-header-navigation ul a:active {
+  opacity: 0.5;
+}
+
+.main-header-navigation ul .active:hover,
+.main-header-navigation ul .active:focus,
+.main-header-navigation ul .active:active {
+  background-color: rgb(50, 66, 92);
+  opacity: 1;
+}
+
+.main-header-navigation {
+  border-bottom: 5px solid rgb(41, 52, 73);
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+.page-title {
+  background-color: rgb(242, 246, 248);
+}
+
+.page-title h1 {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(50, 66, 92);
+}
+
+.filtration .filter,
+.sort-by {
+  background-color: rgb(247, 243, 236);
+}
+
+.filtration .filter span,
+.sort-by .sort {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+.filtration .price,
+.filtration .vendors,
+.filtration .power-supply {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+.filtration .vendor-filter,
+.filtration .power-supply-filter {
+  list-style: none;
+}
+
+.filtration .vendor-filter {
+  border-top: 1px solid rgb(229, 229, 229);
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.filtration .vendor-filter label,
+.filtration .power-supply-filter label {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+.filtration .btn {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 229, 229);
+}
+
+.kind-of-sort a {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(178, 178, 178);
+  text-decoration: none;
+  border-bottom: 1px dotted rgb(238, 54, 67);
+}
+
+.kind-of-sort a:hover,
+.kind-of-sort a:focus {
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(238, 54, 67);
+}
+
+.kind-of-sort a:active {
+  color: rgb(238, 54, 67);
+  border-bottom: none;
+}
+
+.new-flag-container {
+  width: 60px;
+  height: 59px;
+  background-image: url('../img/new-flag.png');
+  background-repeat: no-repeat;
+}
+
+.product-categories {
+  list-style: none;
+}
+
+.product-categories svg,
+.special-offers svg {
+  fill: rgb(255, 255, 255);
+}
+
+.product-categories h2,
+.special-offers h2 {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+
+.category-btn {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.1)
+}
+
+.category-btn:hover,
+.category-btn:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.product-categories .category-btn:active {
+  background-color: rgba(0, 0, 0, 0.3)
+}
+
+.product-categories .material {
+  background-color: rgb(255, 191, 71);
+}
+
+.product-categories .instrument {
+  background-color: rgb(59, 188, 227);
+}
+
+.product-categories .technic {
+  background-color: rgb(220, 145, 216);
+}
+
+.special-offers,
+.special-offers ul {
+  list-style: none;
+}
+
+.special-offers .slider h3 {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+}
+
+.special-offers .slider span {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+
+.red-btn {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  background-color: rgb(238, 54, 67);
+}
+
+.red-btn:hover,
+.red-btn:focus {
+  background-color: rgb(202, 44, 55);
+}
+
+.special-offers .slider .red-btn:active {
+  background-color: rgb(186, 39, 50);
+}
+
+.special-offers .puncher,
+.special-offers .drill {
+  width: 620px;
+  height: 266px;
+}
+
+.special-offers .puncher {
+  background-image: url('../img/slider-puncher.jpg');
+  background-image: no-repeat;
+}
+
+.special-offers .drill {
+  background-image: url('../img/slider-drill.jpg');
+  background-image: no-repeat;
+}
+
+.special-offers .sale {
+  background-color: rgb(142, 215, 143);
+}
+
+.special-offers .delivery {
+  background-color: rgb(255, 192, 71);
+}
+
+.popular-goods ul,
+.popular-vendors ul,
+.goods,
+.pagination-list {
+  list-style: none;
+}
+
+.popular-goods div,
+.popular-vendors div {
+  background-color: rgb(249, 245, 240);
+}
+
+.popular-goods h1,
+.popular-vendors h1 {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(50, 66, 92);
+}
+
+.popular-goods li,
+.goods li {
+  width: 220px;
+  height: 318px;
+  border: 1px solid rgb(234, 234, 234);
+}
+
+.popular-goods .bosch-bfg-9000,
+.goods .bosch-bfg-9000 {
+  background-image: url('../img/bosch-bfg-9000.jpg');
+  background-repeat: no-repeat;
+}
+
+.popular-goods .bosch-bfg-3000,
+.goods .bosch-bfg-3000 {
+  background-image: url('../img/bosch-bfg-3000.jpg');
+  background-repeat: no-repeat;
+}
+
+.popular-goods .bosch-bfg-6000,
+.goods .bosch-bfg-6000 {
+  background-image: url('../img/bosch-bfg-6000.jpg');
+  background-repeat: no-repeat;
+}
+
+.popular-goods .bosch-bfg-2000,
+.goods .bosch-bfg-2000 {
+  background-image: url('../img/bosch-bfg-2000.jpg');
+  background-repeat: no-repeat;
+}
+
+
+.popular-goods h2,
+.goods h2 {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+.popular-goods .old-price,
+.goods .old-price {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  text-decoration: line-through;
+  color: rgb(169, 169, 169);
+}
+
+.popular-goods .current-price,
+.goods .current-price {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  background-color: rgb(238, 54, 67);
+}
+
+.goods .modal-block a {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  background-color: rgb(99, 166, 62);
+  border-bottom: 3px solid rgb(54, 115, 21);
+}
+
+.goods .modal-block a svg {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.goods .modal-block a:hover,
+.goods .modal-block a:focus {
+  background-color: rgb(95, 187, 45);
+  border-bottom: 3px solid rgb(54, 115, 21);
+}
+
+.goods .modal-block a:hover svg,
+.goods .modal-block a:focus svg {
+  fill: rgb(255, 255, 255);
+}
+
+.goods .modal-block a:active {
+  background-color: rgb(81, 133, 52);
+  border-bottom: 3px solid rgb(81, 133, 52);
+}
+
+.goods .modal-block button {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(50, 66, 92);
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(99, 166, 62);
+}
+
+.goods .modal-block button:hover,
+.goods .modal-block button:focus {
+  border: 3px solid rgb(50, 66, 92);
+}
+
+.goods .modal-block button:active {
+  color: rgb(50, 66, 92);
+  border: 3px solid rgb(50, 66, 92);
+  opacity: 0.3;
+}
+
+/* Здесь будут правила при наведении на блоки товаров */
+
+.popular-vendors li {
+  width: 220px;
+  height: 145px;
+  border: 1px solid rgb(234, 234, 234);
+}
+
+/* Здесь будут правила при наведении на блоки популярных вендоров */
+
+.services {
+  background-color: rgb(243, 247, 249);
+  background-image: url('../img/gray-background.jpg');
+}
+
+.services h1,
+.services h2 {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.services h1 {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+
+.services h2 {
+  font-size: 36px;
+  color: rgb(50, 66, 92);
+}
+
+.services p {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.services .btn-container {
+  background-image: url('../img/slider-2-decor.png');
+  background-repeat: no-repeat;
+}
+
+.service-btn {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  border: 1px solid rgb(234, 234, 234);
+}
+
+.service-btn:enabled {
+  color: rgb(255, 255, 255);
+  background-color: rgb(50, 66, 92);
+}
+
+.service-btn:hover:enabled,
+.service-btn:focus:enabled {
+  color: rgb(255, 255, 255);
+  background-color: rgb(41, 52, 73);
+}
+
+.service-btn:disabled,
+.active-btn:hover:disabled,
+.active-btn:focus:disabled,
+.active-btn:active:disabled {
+  color: rgb(50, 66, 92);
+  background-color: rgb(255, 255, 255);
+}
+
+.services .delivery {
+  background-image: url('../img/slider-2-delivery.png');
+  background-repeat: no-repeat;
+}
+
+.services .guarantee {
+  background-image: url('../img/slider-2-guarantee.png');
+  background-repeat: no-repeat;
+}
+
+.services .credit {
+  background-image: url('../img/slider-2-credit.png');
+  background-repeat: no-repeat;
+}
+
+.info-block span,
+.location-block span {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+.info-block p,
+.location-block p {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.info-block ul {
+  list-style: none;
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.pagination-list a {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(229, 229, 229);
+}
+
+.pagination-list a:hover,
+.pagination-list a:focus {
+  border: 1px solid rgb(189, 198, 202);
+}
+
+.pagination-list a:active {
+  border: 1px solid rgb(238, 54, 67);
+}
+
+.pagination-list .pagination-item-current a {
+  color: rgb(255, 255, 255);
+  background-color: rgb(238, 54, 67);
+  border: 1px solid rgb(238, 54, 67);
+}
+
+.puncher-info {
+  background-color: rgb(242, 246, 248);
+}
+
+.puncher-info span {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+.puncher-info p {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.main-footer {
+  background-color: rgb(50, 66, 92);
+}
+
+.main-footer ul {
+  list-style: none;
+}
+
+.main-footer-navigation .site a:hover,
+.main-footer-navigation .site a:focus,
+.main-footer-navigation .products a:hover,
+.main-footer-navigation .products a:focus {
+  text-decoration: underline;
+}
+
+.main-footer-navigation .site a:active,
+.main-footer-navigation .products a:active {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.main-footer-logo {
+  display: block;
+  width: 138px;
+  padding-left: 41px;
+  padding-right: 41px;
+  padding-top: 27px;
+  padding-bottom: 15px;
+  background-color: rgb(238, 54, 67);
+  border-bottom: 5px solid rgb(181, 41, 51);
+}
+
+.main-footer-logo:hover,
+.main-footer-logo:focus {
+  background-color: rgb(202, 44, 55);
+  border-bottom: 5px solid rgb(154, 33, 42);
+}
+
+.main-footer-logo:active {
+  background-color: rgb(186, 39, 50);
+  border-bottom: 5px solid rgb(142, 30, 38);
+}
+
+.main-footer-contacts {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+
+.main-footer .cellar-section {
+  background-color: rgb(41, 52, 73);
+}
+
+.cellar-section .copyright,
+.main-footer .feedback span,
+.main-footer .developed-by span {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+
+.main-footer-social a {
+  display: block;
+  width: 40px;
+  background-color: rgb(33, 42, 58);
+}
+
+.main-footer-social a:hover,
+.main-footer-social a:focus,
+.main-footer-social a:active {
+  background-color: rgb(238, 54, 67);
+}
+
+.main-footer .feedback a,
+.main-footer .developed-by a {
+  color: rgb(255, 209, 128);
+}
+
+.main-footer .feedback a:hover,
+.main-footer .feedback a:focus,
+.main-footer .developed-by a:hover,
+.main-footer .developed-by a:focus {
+  text-decoration: underline;
+}
+
+.main-footer .feedback a:active,
+.main-footer .developed-by a:active {
+  text-decoration: none;
+  color: rgb(238, 54, 67);
+}
+
+.modal-feedback,
+.modal-buy {
+  border-top: 5px solid rgb(255, 83, 87);
+}
+
+.modal-feedback form span {
+  display: block;
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.modal-feedback form input::-webkit-input-placeholder {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(169, 169, 169);
+}
+
+.modal-feedback form input {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(222, 227, 228);
+}
+
+.modal-buy span {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 30px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.modal-buy .white-btn {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
