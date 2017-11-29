@@ -13,64 +13,97 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .visually-hidden {
   display: none;
+}
+
+.container {
+  width: 940px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
+.cards-section {
+  margin-bottom: 53px;
 }
 
 .main-header {
   background-color: rgb(243, 247, 249);
   background-image: url('../img/gray-background.jpg');
+  padding-bottom: 60px;
 }
 
-.main-header ul {
-  list-style: none;
+.flex-wrapper {
+  display: flex;
+  flex-direction: row;
 }
 
 .main-header .loft-section {
   font-family: 'Cuprum', 'Arial', sans-serif;
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: 400;
   background-color: rgb(41, 52, 73);
 }
 
 .loft-section a {
   color: rgb(255, 255, 255);
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
-.loft-section .main-header-logo {
-  display: block;
+.main-header .logo {
   width: 110px;
   padding-left: 55px;
   padding-right: 55px;
   padding-top: 13px;
   padding-bottom: 7px;
   background-color: rgb(238, 54, 67);
-  border-bottom: 5px solid rgb(181, 41, 51);
+  box-shadow: 0 5px 0 rgb(181, 41, 51);
 }
 
-.loft-section .main-header-logo:hover,
-.loft-section .main-header-logo:focus {
+.main-header .logo:hover,
+.main-header .logo:focus {
   background-color: rgb(202, 44, 55);
-  border-bottom: 5px solid rgb(154, 33, 42);
+  box-shadow: 0 5px 0 rgb(154, 33, 42);
 }
 
-.loft-section .main-header-logo:active {
+.main-header .logo:active {
   background-color: rgb(186, 39, 50);
-  border-bottom: 5px solid rgb(142, 30, 38);
+  box-shadow: 0 5px 0 rgb(142, 30, 38);
 }
 
 .main-header .index-logo:hover,
 .main-header .index-logo:focus,
-.main-header .index-logo:active,
-.main-footer .index-logo:hover,
-.main-footer .index-logo:focus,
-.main-footer .index-logo:active {
+.main-header .index-logo:active {
   background-color: rgb(238, 54, 67);
-  border-bottom: 5px solid rgb(181, 41, 51);
+  box-shadow: 0 5px 0 rgb(181, 41, 51);
 }
 
-.loft-section .search input {
+/* [Вопрос] Как быть с позиционированием инлайновых svg-картинок? */
+
+.loft-section .search-functions,
+.loft-section .buy-functions {
+  align-items: center;
+}
+
+.search-functions .search {
+  width: 270px;
+}
+
+.search-functions .favorites,
+.buy-functions .basket,
+.buy-functions .checkout {
+  width: 150px;
+  text-align: center;
+}
+
+.search-functions .search input {
   background-color: inherit;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 17px;
@@ -81,13 +114,13 @@ a {
 }
 
 /* Это правило не работает: */
-.loft-section .search input:active {
+.search-functions .search input:active {
   background-color: rgb(255, 255, 255);
 }
-/*[Вопрос] Подскажи как добиться белого фона input, окрашивания
-иконки поиска в красный цвет, когда курсор в поле ввода? */
+/*[Вопрос] Подскажи как добиться белого фона input, а также окрашивания
+иконки поиска в красный цвет, когда курсор находится в поле ввода? */
 
-.loft-section .search input::-webkit-input-placeholder {
+.search-functions .search input::-webkit-input-placeholder {
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -95,27 +128,27 @@ a {
   color: rgb(255, 255, 255);
 }
 
-.loft-section .search input::selection {
+.search-functions .search input::selection {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
 
-.loft-section .favorites:hover,
-.loft-section .favorites:focus,
-.loft-section .basket:hover,
-.loft-section .basket:focus,
-.loft-section .search:hover,
-.loft-section .search:focus {
+.search-functions .search:hover,
+.search-functions .search:focus,
+.search-functions .favorites:hover,
+.search-functions .favorites:focus,
+.buy-functions .basket:hover,
+.buy-functions .basket:focus {
   background-color: rgb(33, 42, 58);
 }
 
-.loft-section .favorites:hover svg,
-.loft-section .favorites:focus svg,
-.loft-section .basket:hover svg,
-.loft-section .basket:focus svg,
-.loft-section .search:hover svg,
+.search-functions .favorites:hover svg,
+.search-functions .favorites:focus svg,
+.buy-functions .basket:hover svg,
+.buy-functions .basket:focus svg,
+.search-functions .search:hover svg,
 /* Это правило не работает: */
-.loft-section .search:focus svg {
+.search-functions .search:focus svg {
   fill: rgba(255, 255, 255, 1);
   /* [Вопрос] Как написать css-правило:
   'если .search input:focus, то
@@ -123,8 +156,8 @@ a {
   Может подключить svg внешним файлом фона? */
 }
 
-.loft-section .favorites:active,
-.loft-section .basket:active {
+.search-functions .favorites:active,
+.buy-functions .basket:active {
   background-color: rgb(22, 29, 41);
   /* [Вопрос] Как сделать прозрачность только тексту ссылки,
   исключая тег svg внутри этой ссылки?
@@ -132,18 +165,12 @@ a {
   opacity: 0.6;
 }
 
-.loft-section .favorites:active svg,
-.loft-section .basket:active svg {
+.search-functions .favorites:active svg,
+.buy-functions .basket:active svg {
   fill: rgba(255, 255, 255, 0.5);
 }
 
 .buy-functions .checkout {
-  display: block;
-  width: 108px;
-  padding-left: 21px;
-  padding-right: 21px;
-  padding-top: 14px;
-  padding-bottom: 14px;
   background-color: rgb(99, 166, 62);
 }
 
@@ -156,7 +183,20 @@ a {
   opacity: 0.51;
 }
 
+.main-header-brief-section {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.main-header-brief-info,
+.main-header-contacts {
+  align-self: center;
+}
+
 .main-header-brief-info {
+  width: 200px;
+  margin-left: 55px;
+  margin-right: 70px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 16px;
   line-height: 23px;
@@ -165,12 +205,21 @@ a {
   color: rgb(238, 54, 67);
 }
 
+.main-header-contacts {
+  flex-direction: column;
+}
+
 .main-header-contacts a {
+  width: 264px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: 3px solid rgb(255, 255, 255);
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 21px;
   line-height: 18px;
   font-weight: 400;
   color: rgb(238, 54, 67);
+  text-align: center;
 }
 
 .main-header-contacts .address {
@@ -179,14 +228,39 @@ a {
   line-height: 24px;
   font-weight: 400;
   color: rgb(50, 66, 92);
+  align-self: center;
+}
+
+.user-functions {
+  width: 350px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .user-functions-btn {
+  display: block;
+  padding-top: 13px;
+  padding-bottom: 13px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 21px;
-  line-height: 18px;
+  line-height: 25px;
   font-weight: 400;
   color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.user-functions .login {
+  width: 120px;
+  margin-right: 10px;
+}
+
+.user-functions .check-in {
+  width: 150px;
+}
+
+.user-functions .logout-btn {
+  width: 300px;
 }
 
 .my-orders,
@@ -197,6 +271,16 @@ a {
   font-weight: 400;
   color: rgb(50, 66, 92);
   text-decoration: underline;
+}
+
+.my-orders {
+  margin-left: 60px;
+  margin-right: 15px;
+}
+
+.account-info {
+  margin-left: 15px;
+  margin-right: 60px;
 }
 
 .user-functions-btn:hover,
@@ -218,15 +302,33 @@ a {
 .account-info a:active {
   color: rgb(0, 0, 0);
   opacity: 0.3;
+  /* [Вопрос] Заливка фона кнопки становится серой, хотя явно
+  задаю белый цвет фона. Почему так? Как исправить? */
+  background-color: rgb(255, 255, 255);
 }
 
-.main-header-navigation ul,
-.main-footer-navigation ul {
+.main-header-navigation .site {
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 5px solid rgb(41, 52, 73);
+}
+
+.main-header-navigation .site,
+.main-footer-navigation .site {
   background-color: rgb(50, 66, 92);
 }
 
-.main-header-navigation ul a,
-.main-footer-navigation ul a {
+.main-header-navigation .site a {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.main-header-navigation .site a,
+.main-footer-navigation .site a,
+.main-footer-navigation .products a {
+  display: block;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 17px;
   line-height: 17px;
@@ -238,28 +340,33 @@ a {
   color: rgb(255, 209, 128);
 }
 
-.main-header-navigation ul a:hover,
-.main-header-navigation ul a:focus {
+.main-header-navigation .site a:hover,
+.main-header-navigation .site a:focus {
   background-color: rgb(41, 52, 73);
 }
 
-.main-header-navigation ul a:active {
+.main-header-navigation .site a:active {
   opacity: 0.5;
 }
 
-.main-header-navigation ul .active:hover,
-.main-header-navigation ul .active:focus,
-.main-header-navigation ul .active:active {
+.main-header-navigation .site .active:hover,
+.main-header-navigation .site .active:focus,
+.main-header-navigation .site .active:active,
+.main-footer-navigation .site .active:hover,
+.main-footer-navigation .site .active:focus,
+.main-footer-navigation .site .active:active {
   background-color: rgb(50, 66, 92);
   opacity: 1;
-}
-
-.main-header-navigation {
-  border-bottom: 5px solid rgb(41, 52, 73);
+  text-decoration: none;
 }
 
 .breadcrumbs {
-  list-style: none;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.breadcrumbs li {
+  margin-right: 40px;
 }
 
 .breadcrumbs a {
@@ -272,10 +379,16 @@ a {
 }
 
 .page-title {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 28px;
+  margin-bottom: 20px;
   background-color: rgb(242, 246, 248);
 }
 
 .page-title h1 {
+  margin: 0;
+  padding: 0;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 30px;
   line-height: 30px;
@@ -284,9 +397,15 @@ a {
   color: rgb(50, 66, 92);
 }
 
+.filtration {
+  flex-basis: 220px;
+  margin-right: 20px;
+}
+
 .filtration .filter,
 .sort-by {
   background-color: rgb(247, 243, 236);
+  margin-bottom: 20px;
 }
 
 .filtration .filter span,
@@ -308,11 +427,6 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   color: rgb(0, 0, 0);
-}
-
-.filtration .vendor-filter,
-.filtration .power-supply-filter {
-  list-style: none;
 }
 
 .filtration .vendor-filter {
@@ -364,6 +478,7 @@ a {
 }
 
 .new-flag-container {
+  position: absolute;
   width: 60px;
   height: 59px;
   background-image: url('../img/new-flag.png');
@@ -371,7 +486,18 @@ a {
 }
 
 .product-categories {
-  list-style: none;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.product-categories li {
+  width: 300px;
+  height: 123px;
+  margin-right: 20px;
+}
+
+.product-categories li:last-child {
+  margin-right: 0;
 }
 
 .product-categories svg,
@@ -381,6 +507,8 @@ a {
 
 .product-categories h2,
 .special-offers h2 {
+  margin: 0;
+  padding: 0;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 24px;
   line-height: 30px;
@@ -419,12 +547,9 @@ a {
   background-color: rgb(220, 145, 216);
 }
 
-.special-offers,
-.special-offers ul {
-  list-style: none;
-}
-
-.special-offers .slider h3 {
+.slider h2 {
+  margin: 0;
+  padding: 0;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 36px;
   line-height: 36px;
@@ -433,7 +558,7 @@ a {
   color: rgb(255, 255, 255);
 }
 
-.special-offers .slider span {
+.slider span {
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 18px;
   line-height: 18px;
@@ -456,48 +581,71 @@ a {
   background-color: rgb(202, 44, 55);
 }
 
-.special-offers .slider .red-btn:active {
+.slider .red-btn:active {
   background-color: rgb(186, 39, 50);
 }
 
-.special-offers .puncher,
-.special-offers .drill {
+.slide {
   width: 620px;
   height: 266px;
 }
 
-.special-offers .puncher {
+.puncher {
   background-image: url('../img/slider-puncher.jpg');
   background-image: no-repeat;
 }
 
-.special-offers .drill {
+.drill {
   background-image: url('../img/slider-drill.jpg');
   background-image: no-repeat;
 }
 
+.special-offers {
+  margin-left: 20px;
+}
+
 .special-offers .sale {
   background-color: rgb(142, 215, 143);
+  width: 300px;
+  height: 123px;
+  margin-bottom: 20px;
 }
 
 .special-offers .delivery {
   background-color: rgb(255, 192, 71);
+  width: 300px;
+  height: 123px;
 }
 
-.popular-goods ul,
-.popular-vendors ul,
-.goods,
-.pagination-list {
-  list-style: none;
+.goods {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.goods li {
+  margin-bottom: 20px;
 }
 
 .popular-goods div,
 .popular-vendors div {
   background-color: rgb(249, 245, 240);
+  justify-content: space-between;
+  align-items: center;
+  min-height: 89px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+}
+
+.popular-goods ul,
+.popular-vendors ul {
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .popular-goods h1,
 .popular-vendors h1 {
+  margin: 0;
+  padding: 0;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 30px;
   line-height: 30px;
@@ -537,9 +685,10 @@ a {
   background-repeat: no-repeat;
 }
 
-
 .popular-goods h2,
 .goods h2 {
+  margin: 0;
+  padding: 0;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 18px;
   line-height: 18px;
@@ -626,6 +775,7 @@ a {
   width: 220px;
   height: 145px;
   border: 1px solid rgb(234, 234, 234);
+  margin-bottom: 20px;
 }
 
 /* Здесь будут правила при наведении на блоки популярных вендоров */
@@ -633,10 +783,15 @@ a {
 .services {
   background-color: rgb(243, 247, 249);
   background-image: url('../img/gray-background.jpg');
+  margin-top: 85px;
+  margin-bottom: 85px;
+  padding-top: 65px;
 }
 
 .services h1,
 .services h2 {
+  margin: 0;
+  padding: 0;
   font-family: 'Cuprum', 'Arial', sans-serif;
   line-height: 24px;
   font-weight: 400;
@@ -664,9 +819,11 @@ a {
 .services .btn-container {
   background-image: url('../img/slider-2-decor.png');
   background-repeat: no-repeat;
+  flex-direction: column;
+  margin-right: 80px;
 }
 
-.service-btn {
+.btn-container .service-btn {
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 21px;
   line-height: 30px;
@@ -674,21 +831,22 @@ a {
   border: 1px solid rgb(234, 234, 234);
 }
 
-.service-btn:enabled {
+.btn-container .service-btn:enabled {
   color: rgb(255, 255, 255);
   background-color: rgb(50, 66, 92);
 }
 
-.service-btn:hover:enabled,
-.service-btn:focus:enabled {
+.btn-container .service-btn:hover:enabled,
+.btn-container .service-btn:focus:enabled {
   color: rgb(255, 255, 255);
   background-color: rgb(41, 52, 73);
+  cursor: pointer;
 }
 
-.service-btn:disabled,
-.active-btn:hover:disabled,
-.active-btn:focus:disabled,
-.active-btn:active:disabled {
+.btn-container .service-btn:disabled,
+.btn-container .active-btn:hover:disabled,
+.btn-container .active-btn:focus:disabled,
+.btn-container .active-btn:active:disabled {
   color: rgb(50, 66, 92);
   background-color: rgb(255, 255, 255);
 }
@@ -696,16 +854,23 @@ a {
 .services .delivery {
   background-image: url('../img/slider-2-delivery.png');
   background-repeat: no-repeat;
+  width: 280px;
 }
 
 .services .guarantee {
   background-image: url('../img/slider-2-guarantee.png');
   background-repeat: no-repeat;
+  width: 280px;
 }
 
 .services .credit {
   background-image: url('../img/slider-2-credit.png');
   background-repeat: no-repeat;
+  width: 280px;
+}
+
+.about-us-section {
+  margin-bottom: 86px;
 }
 
 .info-block span,
@@ -728,7 +893,6 @@ a {
 }
 
 .info-block ul {
-  list-style: none;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 18px;
   line-height: 20px;
@@ -785,8 +949,81 @@ a {
   background-color: rgb(50, 66, 92);
 }
 
-.main-footer ul {
-  list-style: none;
+.main-footer section:first-child {
+  margin-bottom: 60px;
+}
+
+.main-footer .logo-contacts-block {
+  flex-direction: column;
+}
+
+.main-footer .logo {
+  width: 138px;
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-top: 27px;
+  padding-bottom: 15px;
+  background-color: rgb(238, 54, 67);
+  box-shadow: inset 0 -5px 0 rgb(181, 41, 51);
+}
+
+.main-footer .logo:hover,
+.main-footer .logo:focus {
+  background-color: rgb(202, 44, 55);
+  box-shadow: inset 0 -5px 0 rgb(154, 33, 42);
+}
+
+.main-footer .logo:active {
+  background-color: rgb(186, 39, 50);
+  box-shadow: inset 0 -5px 0 rgb(142, 30, 38);
+}
+
+.main-footer .index-logo:hover,
+.main-footer .index-logo:focus,
+.main-footer .index-logo:active {
+  background-color: rgb(238, 54, 67);
+  box-shadow: inset 0 -5px 0 rgb(181, 41, 51);
+}
+
+.main-footer .contacts {
+  width: 380px;
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+
+/* [Вопрос] Подскажи почему ul не тянется на всю ширину nav?
+Как убрать правый отступ внутри навигации футера:
+'.main-footer-navigation .site' и '.main-footer-navigation .products'? */
+
+.main-footer-navigation {
+  margin-top: 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid red;
+}
+
+.main-footer-navigation .site,
+.main-footer-navigation .products {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid green;
+}
+
+.main-footer-navigation .site {
+  margin-left: 10px;
+}
+
+.main-footer-navigation .products {
+  margin-left: 35px;
+}
+
+.main-footer-navigation .site a,
+.main-footer-navigation .products a {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .main-footer-navigation .site a:hover,
@@ -802,43 +1039,20 @@ a {
   text-decoration: none;
 }
 
-.main-footer-logo {
-  display: block;
-  width: 138px;
-  padding-left: 41px;
-  padding-right: 41px;
-  padding-top: 27px;
-  padding-bottom: 15px;
-  background-color: rgb(238, 54, 67);
-  border-bottom: 5px solid rgb(181, 41, 51);
-}
-
-.main-footer-logo:hover,
-.main-footer-logo:focus {
-  background-color: rgb(202, 44, 55);
-  border-bottom: 5px solid rgb(154, 33, 42);
-}
-
-.main-footer-logo:active {
-  background-color: rgb(186, 39, 50);
-  border-bottom: 5px solid rgb(142, 30, 38);
-}
-
-.main-footer-contacts {
-  font-family: 'Cuprum', 'Arial', sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
-  color: rgb(255, 255, 255);
-}
-
 .main-footer .cellar-section {
   background-color: rgb(41, 52, 73);
 }
 
+.cellar-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .cellar-section .copyright,
 .main-footer .feedback span,
-.main-footer .developed-by span {
+.main-footer .developed-by span,
+.main-footer .feedback a,
+.main-footer .developed-by a {
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 16px;
   line-height: 16px;
@@ -846,10 +1060,31 @@ a {
   color: rgb(255, 255, 255);
 }
 
+.cellar-section .copyright {
+  display: block;
+  width: 240px;
+  margin-right: 140px;
+}
+
+.main-footer-social {
+  width: 180px;
+  margin-right: 60px;
+}
+
+.main-footer .feedback {
+  width: 180px;
+}
+
+.main-footer .developed-by {
+  width: 120px;
+  margin-left: auto;
+}
+
 .main-footer-social a {
   display: block;
   width: 40px;
   background-color: rgb(33, 42, 58);
+  border-radius: 50%;
 }
 
 .main-footer-social a:hover,
