@@ -7,6 +7,7 @@ body {
   font-weight: 400;
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
+  min-width: 960px;
 }
 
 a {
@@ -85,14 +86,7 @@ ul {
   box-shadow: 0 5px 0 rgb(181, 41, 51);
 }
 
-/* [Вопрос] Как быть с позиционированием инлайновых svg-картинок? */
-
-.loft-section .search-functions,
-.loft-section .buy-functions {
-  align-items: center;
-}
-
-.search-functions .search {
+.search-functions form {
   width: 270px;
 }
 
@@ -100,27 +94,42 @@ ul {
 .buy-functions .basket,
 .buy-functions .checkout {
   width: 150px;
-  text-align: center;
+  padding-top: 13px;
+  box-sizing: border-box;
 }
 
-.search-functions .search input {
+.search-functions form label {
+  display: block;
+  height: 42px;
+  position: relative;
+  background-color: rgb(41, 52, 73);
+}
+
+.search-functions form label svg {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+}
+
+.search-functions form input {
+  margin: 0;
+  padding: 0;
+  margin-left: 49px;
+  margin-top: 13px;
+  width: 200px;
+}
+
+.search-functions form input {
   background-color: inherit;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
-  color: rgb(0, 0, 0);
   border: none;
+  color: rgb(0, 0, 0);
 }
 
-/* Это правило не работает: */
-.search-functions .search input:active {
-  background-color: rgb(255, 255, 255);
-}
-/*[Вопрос] Подскажи как добиться белого фона input, а также окрашивания
-иконки поиска в красный цвет, когда курсор находится в поле ввода? */
-
-.search-functions .search input::-webkit-input-placeholder {
+.search-functions form input::-webkit-input-placeholder {
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -128,13 +137,8 @@ ul {
   color: rgb(255, 255, 255);
 }
 
-.search-functions .search input::selection {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-}
-
-.search-functions .search:hover,
-.search-functions .search:focus,
+.search-functions form label:hover,
+.search-functions form label:focus,
 .search-functions .favorites:hover,
 .search-functions .favorites:focus,
 .buy-functions .basket:hover,
@@ -146,22 +150,45 @@ ul {
 .search-functions .favorites:focus svg,
 .buy-functions .basket:hover svg,
 .buy-functions .basket:focus svg,
-.search-functions .search:hover svg,
-/* Это правило не работает: */
-.search-functions .search:focus svg {
+.search-functions form label:hover svg,
+.search-functions form label:focus svg {
   fill: rgba(255, 255, 255, 1);
-  /* [Вопрос] Как написать css-правило:
-  'если .search input:focus, то
-  .search:focus svg {fill: rgba(255, 255, 255, 1)}'?
-  Может подключить svg внешним файлом фона? */
+}
+
+.search-functions form label:active {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.search-functions form label:active svg {
+  fill: rgb(238, 54, 67);
+}
+
+.search-functions .favorites {
+  position: relative;
+  padding-left: 45px;
+}
+
+.buy-functions .basket {
+  position: relative;
+  padding-left: 50px;
+}
+
+.search-functions .favorites svg {
+  position: absolute;
+  top: 13px;
+  left: 17px;
+}
+
+.buy-functions .basket svg {
+  position: absolute;
+  top: 13px;
+  left: 17px;
 }
 
 .search-functions .favorites:active,
 .buy-functions .basket:active {
   background-color: rgb(22, 29, 41);
-  /* [Вопрос] Как сделать прозрачность только тексту ссылки,
-  исключая тег svg внутри этой ссылки?
-  Может подключить svg внешним файлом фона? */
   opacity: 0.6;
 }
 
@@ -172,6 +199,7 @@ ul {
 
 .buy-functions .checkout {
   background-color: rgb(99, 166, 62);
+  text-align: center;
 }
 
 .buy-functions .checkout:hover,
@@ -210,6 +238,7 @@ ul {
 }
 
 .main-header-contacts a {
+  position: relative;
   width: 264px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -220,6 +249,12 @@ ul {
   font-weight: 400;
   color: rgb(238, 54, 67);
   text-align: center;
+}
+
+.main-header-contacts a svg {
+  position: absolute;
+  top: 10px;
+  left: 13px;
 }
 
 .main-header-contacts .address {
@@ -239,15 +274,14 @@ ul {
 
 .user-functions-btn {
   display: block;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 21px;
   line-height: 25px;
   font-weight: 400;
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
-  text-align: center;
 }
 
 .user-functions .login {
@@ -255,12 +289,41 @@ ul {
   margin-right: 10px;
 }
 
-.user-functions .check-in {
-  width: 150px;
+.user-functions .login a {
+  position: relative;
+  padding-left: 49px;
 }
 
-.user-functions .logout-btn {
+.user-functions .login a svg {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.user-functions .check-in {
+  width: 150px;
+  text-align: center;
+}
+
+.user-functions .logout a {
+  position: relative;
   width: 300px;
+  padding-left: 49px;
+  box-sizing: border-box;
+}
+
+.user-functions .logout a svg {
+  position: absolute;
+}
+
+.logout a .user-icon {
+  top: 14px;
+  left: 14px;
+}
+
+.logout a .logout-icon {
+  top: 14px;
+  right: 10px;
 }
 
 .my-orders,
@@ -300,10 +363,7 @@ ul {
 .user-functions-btn:active,
 .my-orders a:active,
 .account-info a:active {
-  color: rgb(0, 0, 0);
-  opacity: 0.3;
-  /* [Вопрос] Заливка фона кнопки становится серой, хотя явно
-  задаю белый цвет фона. Почему так? Как исправить? */
+  color: rgba(0, 0, 0, 0.3);
   background-color: rgb(255, 255, 255);
 }
 
@@ -994,22 +1054,18 @@ ul {
   color: rgb(255, 255, 255);
 }
 
-/* [Вопрос] Подскажи почему ul не тянется на всю ширину nav?
-Как убрать правый отступ внутри навигации футера:
-'.main-footer-navigation .site' и '.main-footer-navigation .products'? */
-
 .main-footer-navigation {
+  padding-right: 0;
+  padding-left: 0;
   margin-top: 20px;
   flex-direction: column;
   justify-content: flex-start;
-  border: 1px solid red;
 }
 
 .main-footer-navigation .site,
 .main-footer-navigation .products {
   justify-content: space-between;
   flex-wrap: wrap;
-  border: 1px solid green;
 }
 
 .main-footer-navigation .site {
