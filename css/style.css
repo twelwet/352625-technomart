@@ -14,10 +14,9 @@ a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -197,6 +196,19 @@ ul {
   fill: rgba(255, 255, 255, 0.5);
 }
 
+.buy-functions .complete-basket {
+  background-color: rgb(238, 54, 67);
+}
+
+.buy-functions .complete-basket:hover,
+.buy-functions .complete-basket:focus {
+  background-color: rgb(202, 44, 55);
+}
+
+.buy-functions .complete-basket:focus {
+  background-color: rgb(186, 39, 50);
+}
+
 .buy-functions .checkout {
   background-color: rgb(99, 166, 62);
   text-align: center;
@@ -270,6 +282,9 @@ ul {
   width: 350px;
   justify-content: flex-end;
   flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .user-functions-btn {
@@ -376,6 +391,9 @@ ul {
 .main-header-navigation .site,
 .main-footer-navigation .site {
   background-color: rgb(50, 66, 92);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .main-header-navigation .site a {
@@ -421,6 +439,7 @@ ul {
 }
 
 .breadcrumbs {
+  list-style: none;
   margin-top: 25px;
   margin-bottom: 25px;
 }
@@ -460,6 +479,12 @@ ul {
 .filtration {
   flex-basis: 220px;
   margin-right: 20px;
+}
+
+.filtration ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .filtration .filter,
@@ -537,15 +562,24 @@ ul {
   border-bottom: none;
 }
 
-.new-flag-container {
+.flag {
   position: absolute;
+  top: 0px;
+  right: 0px;
   width: 60px;
-  height: 59px;
-  background-image: url('../img/new-flag.png');
+  height: 60px;
+  z-index: 10;
+}
+
+.flag-new{
+  background-image: url('../img/flag-new.png');
   background-repeat: no-repeat;
 }
 
 .product-categories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   margin-top: 60px;
   margin-bottom: 20px;
 }
@@ -560,15 +594,12 @@ ul {
   margin-right: 0;
 }
 
-.product-categories svg,
-.special-offers svg {
-  fill: rgb(255, 255, 255);
-}
-
 .product-categories h2,
 .special-offers h2 {
   margin: 0;
   padding: 0;
+  margin-left: 23px;
+  margin-top: 20px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 24px;
   line-height: 30px;
@@ -577,13 +608,20 @@ ul {
 }
 
 .category-btn {
+  width: 135px;
+  display: block;
+  margin-left: 20px;
+  margin-top: 15px;
+  padding: 7px 0;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
   color: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.1)
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
 }
 
 .category-btn:hover,
@@ -596,15 +634,56 @@ ul {
 }
 
 .product-categories .material {
+  position: relative;
   background-color: rgb(255, 191, 71);
 }
 
+/* [Вопрос] Подскажи почему не видна svg-картинка? */
+
+.product-categories .material:after {
+  content: '';
+  position: absolute;
+  width: 44px;
+  height: 65px;
+  top: 30px;
+  right: 40px;
+  background-color: red;
+  background-image: url('../img/material.svg');
+  background-image: no-repeat;
+}
+
 .product-categories .instrument {
+  position: relative;
   background-color: rgb(59, 188, 227);
 }
 
+.product-categories .instrument:after {
+  content: '';
+  position: absolute;
+  width: 75px;
+  height: 61px;
+  top: 30px;
+  right: 30px;
+  background-color: red;
+  background-image: url('../img/instrument.svg');
+  background-image: no-repeat;
+}
+
 .product-categories .technic {
+  position: relative;
   background-color: rgb(220, 145, 216);
+}
+
+.product-categories .technic:after {
+  content: '';
+  position: absolute;
+  width: 78px;
+  height: 62px;
+  top: 30px;
+  right: 30px;
+  background-color: red;
+  background-image: url('../img/technic.svg');
+  background-image: no-repeat;
 }
 
 .slider h2 {
@@ -661,45 +740,59 @@ ul {
 }
 
 .special-offers {
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   margin-left: 20px;
 }
 
 .special-offers .sale {
+  position: relative;
   background-color: rgb(142, 215, 143);
   width: 300px;
   height: 123px;
   margin-bottom: 20px;
 }
 
+.special-offers .sale:after {
+  content: '';
+  position: absolute;
+  width: 59px;
+  height: 72px;
+  top: 25px;
+  right: 45px;
+  background-color: red;
+  background-image: url('../img/sale.svg');
+  background-image: no-repeat;
+}
+
 .special-offers .delivery {
+  position: relative;
   background-color: rgb(255, 192, 71);
   width: 300px;
   height: 123px;
 }
 
-.goods {
-  flex-wrap: wrap;
-  justify-content: space-between;
+.special-offers .delivery:after {
+  content: '';
+  position: absolute;
+  width: 78px;
+  height: 63px;
+  top: 30px;
+  right: 30px;
+  background-color: red;
+  background-image: url('../img/delivery.svg');
+  background-image: no-repeat;
 }
 
-.goods li {
-  margin-bottom: 20px;
-}
-
-.popular-goods div,
-.popular-vendors div {
+.popular-goods,
+.popular-vendors {
   background-color: rgb(249, 245, 240);
   justify-content: space-between;
   align-items: center;
   min-height: 89px;
-  margin-top: 21px;
   margin-bottom: 21px;
-}
-
-.popular-goods ul,
-.popular-vendors ul {
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .popular-goods h1,
@@ -714,131 +807,168 @@ ul {
   color: rgb(50, 66, 92);
 }
 
-.popular-goods li,
-.goods li {
-  width: 220px;
-  height: 318px;
+.goods,
+.vendors {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.goods-item,
+.vendors-item {
+  margin-bottom: 20px;
+  width: 222px;
   border: 1px solid rgb(234, 234, 234);
 }
 
-.popular-goods .bosch-bfg-9000,
-.goods .bosch-bfg-9000 {
-  background-image: url('../img/bosch-bfg-9000.jpg');
-  background-repeat: no-repeat;
+.vendors-item {
+  height: 145px;
+  justify-content: center;
 }
 
-.popular-goods .bosch-bfg-3000,
-.goods .bosch-bfg-3000 {
-  background-image: url('../img/bosch-bfg-3000.jpg');
-  background-repeat: no-repeat;
+/* [Вопрос] Никак не разберусь как же растянуть бокс '.vendors-item a'
+на всю ширину бокса '.vendors-item'? */
+
+.vendors-item a {
+  align-items: center;
+  /* временная заливка: */
+  background-color: green;
 }
 
-.popular-goods .bosch-bfg-6000,
-.goods .bosch-bfg-6000 {
-  background-image: url('../img/bosch-bfg-6000.jpg');
-  background-repeat: no-repeat;
-}
-
-.popular-goods .bosch-bfg-2000,
-.goods .bosch-bfg-2000 {
-  background-image: url('../img/bosch-bfg-2000.jpg');
-  background-repeat: no-repeat;
-}
-
-.popular-goods h2,
-.goods h2 {
-  margin: 0;
-  padding: 0;
+.goods-item {
+  position:relative;
+  flex-direction: column;
+  height: 318px;
   font-family: 'PT Sans', 'Arial', sans-serif;
-  font-size: 18px;
-  line-height: 18px;
   font-weight: 700;
+  text-align: center;
+}
+
+.goods-item h2 {
+  margin: 0 25px;
+  margin-top: 25px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 20px;
   color: rgb(0, 0, 0);
 }
 
-.popular-goods .old-price,
-.goods .old-price {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+.goods-item .old-price,
+.goods-item .current-price {
   font-size: 17px;
   line-height: 18px;
-  font-weight: 700;
+  align-self: center;
+}
+
+.goods-item .old-price {
+  min-height: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-decoration: line-through;
   color: rgb(169, 169, 169);
 }
 
-.popular-goods .current-price,
-.goods .current-price {
-  font-family: 'PT Sans', 'Arial', sans-serif;
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: 700;
+.goods-item .current-price {
+  position: relative;
+  padding: 10px 30px;
+  width: 80px;
   color: rgb(255, 255, 255);
   background-color: rgb(238, 54, 67);
+  border-radius: 3px;
 }
 
-.goods .modal-block a {
+.goods-item .current-price:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -19px;
+  width: 0;
+  height: 0;
+  border: 19px solid white;
+  border-left-color: rgb(238, 54, 67);
+}
+
+.goods-item .actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  background-color: rgb(255, 255, 255);
+  z-index: 5;
+}
+
+.actions .buy,
+.actions .bookmark {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  width: 135px;
+  padding: 7px 0;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
   text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.actions .buy {
   color: rgb(255, 255, 255);
   background-color: rgb(99, 166, 62);
-  border-bottom: 3px solid rgb(54, 115, 21);
+  box-shadow: inset 0 -3px 0 0 rgb(54, 115, 21);
 }
 
-.goods .modal-block a svg {
-  fill: rgba(255, 255, 255, 0.3);
-}
-
-.goods .modal-block a:hover,
-.goods .modal-block a:focus {
+.actions .buy:hover,
+.actions .buy:focus {
   background-color: rgb(95, 187, 45);
-  border-bottom: 3px solid rgb(54, 115, 21);
+  box-shadow: inset 0 -3px 0 0 rgb(54, 115, 21);
 }
 
-.goods .modal-block a:hover svg,
-.goods .modal-block a:focus svg {
-  fill: rgb(255, 255, 255);
-}
-
-.goods .modal-block a:active {
+.actions .buy:active {
   background-color: rgb(81, 133, 52);
-  border-bottom: 3px solid rgb(81, 133, 52);
+  box-shadow: inset 0 -3px 0 0 rgb(81, 133, 52);
 }
 
-.goods .modal-block button {
-  font-family: 'Cuprum', 'Arial', sans-serif;
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 400;
-  text-transform: uppercase;
+.actions .bookmark {
   color: rgb(50, 66, 92);
   background-color: rgb(255, 255, 255);
-  border: 3px solid rgb(99, 166, 62);
+  box-shadow: inset 0 0 0 3px rgb(99, 166, 62);
+
 }
 
-.goods .modal-block button:hover,
-.goods .modal-block button:focus {
-  border: 3px solid rgb(50, 66, 92);
+.actions .bookmark:hover,
+.actions .bookmark:focus {
+  box-shadow: inset 0 0 0 3px rgb(50, 66, 92);
 }
 
-.goods .modal-block button:active {
+.actions .bookmark:active {
   color: rgb(50, 66, 92);
-  border: 3px solid rgb(50, 66, 92);
+  box-shadow: inset 0 0 0 3px rgb(50, 66, 92);
   opacity: 0.3;
 }
 
-/* Здесь будут правила при наведении на блоки товаров */
-
-.popular-vendors li {
-  width: 220px;
-  height: 145px;
-  border: 1px solid rgb(234, 234, 234);
-  margin-bottom: 20px;
+.goods-item .actions {
+  display: none;
 }
 
-/* Здесь будут правила при наведении на блоки популярных вендоров */
+.goods-item:hover .actions {
+  display: block;
+}
+
+.goods-item:hover,
+.goods-item:focus,
+.vendors-item:hover,
+.vendors-item:focus {
+  box-shadow: 10px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.vendors-item:active {
+  box-shadow: 4px 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
 
 .services {
   background-color: rgb(243, 247, 249);
@@ -953,11 +1083,20 @@ ul {
 }
 
 .info-block ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
   color: rgb(0, 0, 0);
+}
+
+.pagination-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .pagination-list a {
@@ -1073,6 +1212,9 @@ ul {
 }
 
 .main-footer-navigation .products {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   margin-left: 35px;
 }
 
