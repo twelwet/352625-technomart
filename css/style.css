@@ -31,13 +31,13 @@ img {
 }
 
 .cards-section {
-  margin-bottom: 53px;
+  margin-bottom: 54px;
 }
 
 .main-header {
   background-color: rgb(243, 247, 249);
   background-image: url('../img/gray-background.jpg');
-  padding-bottom: 59px;
+  padding-bottom: 60px;
 }
 
 .flex-wrapper {
@@ -93,31 +93,29 @@ img {
 .buy-functions .basket,
 .buy-functions .checkout {
   width: 150px;
-  padding-top: 13px;
+  padding-top: 12px;
   box-sizing: border-box;
 }
 
-.search-functions form label {
+.search-functions label {
+  min-height: 42px;
   display: block;
   position: relative;
   background-color: rgb(41, 52, 73);
 }
 
-.search-functions form label svg {
+.search-functions svg {
   position: absolute;
   top: 12px;
   left: 17px;
 }
 
-.search-functions form input {
+.search-functions input {
   margin: 0;
   padding: 0;
-  margin-left: 49px;
-  margin-top: 13px;
+  margin-left: 48px;
+  margin-top: 12px;
   width: 200px;
-}
-
-.search-functions form input {
   background-color: inherit;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 17px;
@@ -127,7 +125,7 @@ img {
   color: rgb(0, 0, 0);
 }
 
-.search-functions form input::-webkit-input-placeholder {
+.search-functions input::-webkit-input-placeholder {
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -135,8 +133,8 @@ img {
   color: rgb(255, 255, 255);
 }
 
-.search-functions form label:hover,
-.search-functions form label:focus,
+.search-functions label:hover,
+.search-functions label:focus,
 .search-functions .favorites:hover,
 .search-functions .favorites:focus,
 .buy-functions .basket:hover,
@@ -148,17 +146,19 @@ img {
 .search-functions .favorites:focus svg,
 .buy-functions .basket:hover svg,
 .buy-functions .basket:focus svg,
-.search-functions form label:hover svg,
-.search-functions form label:focus svg {
+.search-functions label:hover svg,
+.search-functions label:focus svg {
   fill: rgba(255, 255, 255, 1);
 }
 
-.search-functions form label:active {
+/* [Вопрос] Не пойму какой селектор применить, чтобы стили ниже применялись
+не только при клике, но и во время ввода текста в input? */
+.search-functions label:active {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
 
-.search-functions form label:active svg {
+.search-functions label:active svg {
   fill: rgb(238, 54, 67);
 }
 
@@ -174,13 +174,13 @@ img {
 
 .search-functions .favorites svg {
   position: absolute;
-  top: 13px;
+  top: 12px;
   left: 17px;
 }
 
 .buy-functions .basket svg {
   position: absolute;
-  top: 13px;
+  top: 12px;
   left: 17px;
 }
 
@@ -227,14 +227,10 @@ img {
   padding-bottom: 40px;
 }
 
-.main-header-brief-info,
-.main-header-contacts {
-  align-self: center;
-}
-
 .main-header-brief-info {
   width: 200px;
-  margin-left: 54px;
+  margin-top: 4px;
+  margin-left: 53px;
   margin-right: 67px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 16px;
@@ -253,8 +249,8 @@ img {
   position: relative;
   width: 270px;
   padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 70px;
+  padding-bottom: 10px;
+  padding-left: 71px;
   border: 3px solid rgb(255, 255, 255);
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 21px;
@@ -265,12 +261,12 @@ img {
 
 .main-header-contacts a svg {
   position: absolute;
-  top: 10px;
-  left: 13px;
+  top: 11px;
+  left: 12px;
 }
 
 .main-header-contacts .address {
-  padding-top: 2px;
+  padding-top: 3px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -290,8 +286,8 @@ img {
 
 .user-functions-btn {
   display: block;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 21px;
   line-height: 25px;
@@ -307,13 +303,13 @@ img {
 
 .user-functions .login a {
   position: relative;
-  padding-left: 47px;
+  padding-left: 46px;
 }
 
 .user-functions .login a svg {
   position: absolute;
   top: 15px;
-  left: 15px;
+  left: 13px;
 }
 
 .user-functions .check-in {
@@ -537,7 +533,7 @@ img {
 .range-filter {
   padding-bottom: 25px;
   border-bottom: 1px solid rgb(229, 229, 229);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .range-filter .range-controls {
@@ -603,8 +599,8 @@ img {
 .price-controls .min-price,
 .price-controls .max-price {
   box-sizing: border-box;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 9px;
+  padding-bottom: 11px;
   width: 95px;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 17px;
@@ -723,7 +719,7 @@ img {
 
 .filtration .btn {
   position: absolute;
-  bottom: 350px;
+  bottom: 457px;
   left: 0px;
   box-sizing: border-box;
   width: 140px;
@@ -879,8 +875,13 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 60px;
+  margin-top: 59px;
   margin-bottom: 20px;
+}
+
+.product-categories .flag-new {
+  top: 0px;
+  right: 0px;
 }
 
 .product-categories li {
@@ -897,8 +898,8 @@ img {
 .special-offers h2 {
   margin: 0;
   padding: 0;
-  margin-left: 23px;
-  margin-top: 20px;
+  margin-left: 22px;
+  margin-top: 21px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 24px;
   line-height: 30px;
@@ -908,11 +909,12 @@ img {
 
 .category-btn {
   position: absolute;
-  bottom: 24px;
+  bottom: 22px;
   left: 25px;
   width: 135px;
   display: block;
-  padding: 11px 0;
+  padding-top: 12px;
+  padding-bottom: 11px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 14px;
@@ -943,8 +945,8 @@ img {
   position: absolute;
   width: 44px;
   height: 65px;
-  top: 30px;
-  right: 41px;
+  top: 31px;
+  right: 43px;
   background-image: url('../img/material.svg');
   background-image: no-repeat;
 }
@@ -959,8 +961,8 @@ img {
   position: absolute;
   width: 75px;
   height: 61px;
-  top: 31px;
-  right: 29px;
+  top: 33px;
+  right: 28px;
   background-image: url('../img/instrument.svg');
   background-image: no-repeat;
 }
@@ -975,8 +977,8 @@ img {
   position: absolute;
   width: 78px;
   height: 62px;
-  top: 30px;
-  right: 30px;
+  top: 31px;
+  right: 31px;
   background-image: url('../img/technic.svg');
   background-image: no-repeat;
 }
@@ -985,7 +987,8 @@ img {
   margin: 0;
   padding: 0;
   display: block;
-  padding: 10px 0;
+  padding-top: 11px;
+  padding-bottom: 9px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -1009,18 +1012,18 @@ img {
 .slider h2 {
   margin: 0;
   padding: 0;
-  margin-left: 25px;
-  margin-top: 25px;
+  margin-left: 24px;
+  margin-top: 21px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 40px;
   font-weight: 700;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
 }
 
 .slider span {
-  margin-left: 25px;
+  margin-left: 24px;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -1029,9 +1032,10 @@ img {
 }
 
 .slider-btn {
+  box-sizing: border-box;
   position: absolute;
-  width: 196px;
-  bottom: 24px;
+  width: 195px;
+  bottom: 22px;
   left: 25px;
 }
 
@@ -1072,7 +1076,7 @@ img {
   position: absolute;
   width: 59px;
   height: 72px;
-  top: 25px;
+  top: 26px;
   right: 45px;
   background-image: url('../img/sale.svg');
   background-image: no-repeat;
@@ -1090,8 +1094,8 @@ img {
   position: absolute;
   width: 78px;
   height: 63px;
-  top: 30px;
-  right: 30px;
+  top: 32px;
+  right: 31px;
   background-image: url('../img/delivery.svg');
   background-image: no-repeat;
 }
@@ -1102,7 +1106,12 @@ img {
   justify-content: space-between;
   align-items: center;
   min-height: 89px;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
+}
+
+.popular-vendors {
+  margin-top: 1px;
+  margin-bottom: 20px;
 }
 
 .popular-goods h1,
@@ -1118,9 +1127,13 @@ img {
   color: rgb(50, 66, 92);
 }
 
+.popular-vendors h1 {
+  margin-left: 25px;
+}
+
 .catalog-btn {
   width: 253px;
-  margin-right: 23px;
+  margin-right: 24px;
 }
 
 .goods,
@@ -1150,7 +1163,7 @@ img {
 }
 
 .goods-item {
-  position:relative;
+  position: relative;
   flex-direction: column;
   min-height: 316px;
   font-family: 'PT Sans', 'Arial', sans-serif;
@@ -1171,25 +1184,25 @@ img {
 .goods-item .current-price {
   font-size: 17px;
   line-height: 18px;
-  align-self: center;
 }
 
 .goods-item .old-price {
   min-height: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
   text-decoration: line-through;
   color: rgb(169, 169, 169);
 }
 
 .goods-item .current-price {
+  position: absolute;
   box-sizing: border-box;
-  position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 30px;
+  bottom: 20px;
+  left: 42px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  padding-left: 26px;
   padding-right: 30px;
-  width: 140px;
+  width: 142px;
   color: rgb(255, 255, 255);
   background-color: rgb(238, 54, 67);
   border-radius: 3px;
@@ -1308,7 +1321,7 @@ img {
   background-image: url('../img/gray-background.jpg');
   margin-top: 65px;
   margin-bottom: 80px;
-  padding-top: 70px;
+  padding-top: 68px;
   padding-bottom: 20px;
 }
 
@@ -1344,7 +1357,7 @@ img {
 }
 
 .services .slider-2 {
-  margin-top: 65px;
+  margin-top: 68px;
 }
 
 .slider-2 .btn-container {
@@ -1359,7 +1372,7 @@ img {
   position: absolute;
   width: 10px;
   height: 272px;
-  top: -40px;
+  top: -50px;
   right: 0px;
   background-image: url('../img/slider-2-decor.png');
   background-repeat: no-repeat;
@@ -1369,8 +1382,8 @@ img {
   margin: 0;
   padding: 0;
   padding-left: 22px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 14px;
+  padding-bottom: 17px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 21px;
   line-height: 30px;
@@ -1410,7 +1423,7 @@ img {
 .services .delivery {
   background-image: url('../img/slider-2-delivery.png');
   background-repeat: no-repeat;
-  background-position: 150px 25px;
+  background-position: 150px 23px;
   width: 620px;
 }
 
@@ -1429,7 +1442,7 @@ img {
 }
 
 .about-us-section {
-  margin-bottom: 86px;
+  margin-bottom: 85px;
 }
 
 .info-block {
@@ -1457,7 +1470,7 @@ img {
 
 .info-block p,
 .location-block p {
-  margin-top: 25px;
+  margin-top: 23px;
   margin-bottom: 25px;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 13px;
@@ -1496,7 +1509,7 @@ img {
 
 .info-block a {
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   left: 0;
   padding-left: 40px;
   padding-right: 40px;
@@ -1508,8 +1521,10 @@ img {
 
 .location-block a {
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  bottom: 1px;
+  left: 0;
+  padding-left: 64px;
+  padding-right: 59px;
 }
 
 .pagination-list {
@@ -1565,12 +1580,13 @@ img {
 
 .puncher-info {
   background-color: rgb(242, 246, 248);
+  padding-bottom: 15px;
 }
 
 .puncher-info span {
   display: block;
   padding-top: 68px;
-  padding-bottom: 17px;
+  padding-bottom: 28px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 30px;
   line-height: 24px;
@@ -1580,6 +1596,8 @@ img {
 }
 
 .puncher-info p {
+  margin: 0;
+  padding: 0;
   padding-bottom: 54px;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 13px;
@@ -1604,8 +1622,8 @@ img {
   width: 136px;
   padding-left: 42px;
   padding-right: 42px;
-  padding-top: 22px;
-  padding-bottom: 17px;
+  padding-top: 21px;
+  padding-bottom: 18px;
   margin-bottom: 27px;
   background-color: rgb(238, 54, 67);
   box-shadow: inset 0 -5px 0 rgb(181, 41, 51);
@@ -1687,7 +1705,7 @@ img {
 }
 
 .cellar-section {
-  padding-top: 40px;
+  padding-top: 37px;
   padding-bottom: 40px;
 }
 
@@ -1718,7 +1736,7 @@ img {
 
 .main-footer-social {
   width: 180px;
-  margin-top: -5px;
+  margin-top: -2px;
   margin-right: 70px;
 }
 
