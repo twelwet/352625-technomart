@@ -948,7 +948,7 @@ img {
   top: 31px;
   right: 43px;
   background-image: url('../img/material.svg');
-  background-image: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .product-categories .instrument {
@@ -964,7 +964,7 @@ img {
   top: 33px;
   right: 28px;
   background-image: url('../img/instrument.svg');
-  background-image: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .product-categories .technic {
@@ -980,7 +980,7 @@ img {
   top: 31px;
   right: 31px;
   background-image: url('../img/technic.svg');
-  background-image: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .red-btn {
@@ -1007,6 +1007,81 @@ img {
 
 .red-btn:active {
   background-color: rgb(186, 39, 50);
+}
+
+.slider {
+  position: relative;
+}
+
+.slider input {
+  display: none;
+}
+
+.slider-controls label {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  z-index: 5;
+  box-shadow: inset 0 0 0 2px rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+}
+
+.slider-controls label[for="btn-1"] {
+  top: 220px;
+  left: 295px;
+}
+
+.slider-controls label[for="btn-1"]::before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 40px;
+  top: -106px;
+  left: -270px;
+  background-image: url('../img/icon-left.svg');
+  background-repeat: no-repeat;
+}
+
+.slider-controls label[for="btn-2"] {
+  top: 220px;
+  left: 315px;
+}
+
+.slider-controls label[for="btn-2"]::before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 40px;
+  top: -106px;
+  left: 263px;
+  background-image: url('../img/icon-right.svg');
+  background-repeat: no-repeat;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+  background-color: rgb(238, 54, 67);
+}
+
+#btn-1:checked ~ .slider-inner .slides {
+  transform: translate(0);
+}
+
+#btn-2:checked ~ .slider-inner .slides {
+  transform: translate(-620px);
+}
+
+.slider-inner {
+  /**/
+  overflow: hidden;
+}
+
+.slider-inner .slides {
+  /**/
+  width: 200%;
 }
 
 .slider h2 {
@@ -1040,6 +1115,8 @@ img {
 }
 
 .slide {
+  /**/
+  float: left;
   position: relative;
   width: 620px;
   height: 266px;
@@ -1047,12 +1124,12 @@ img {
 
 .puncher {
   background-image: url('../img/slider-puncher.jpg');
-  background-image: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .drill {
   background-image: url('../img/slider-drill.jpg');
-  background-image: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .special-offers {
@@ -1079,7 +1156,7 @@ img {
   top: 26px;
   right: 45px;
   background-image: url('../img/sale.svg');
-  background-image: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .special-offers .delivery {
@@ -1097,7 +1174,7 @@ img {
   top: 32px;
   right: 31px;
   background-image: url('../img/delivery.svg');
-  background-image: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .popular-goods,
@@ -1845,7 +1922,8 @@ img {
   border-top: 7px solid rgb(255, 83, 87);
 }
 
-.modal-feedback {
+.modal-feedback,
+.modal-buy {
   width: 620px;
   background-color: rgb(255, 255, 255);
   top: 50%;
@@ -1938,7 +2016,26 @@ img {
   right: 9px;
 }
 
+.modal-buy {
+
+}
+
+.modal-buy .close {
+  top: 10px;
+  right: 9px;
+}
+
+.modal-buy img {
+  position: absolute;
+  top: 48px;
+  left: 80px;
+}
+
 .modal-buy span {
+  display: block;
+  padding-left: 180px;
+  margin-top: 75px;
+  margin-bottom: 186px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 30px;
   line-height: 18px;
@@ -1946,12 +2043,31 @@ img {
   color: rgb(0, 0, 0);
 }
 
+.modal-buy .red-btn,
 .modal-buy .white-btn {
+  width: 220px;
+  position: absolute;
+  bottom: 36px;
+}
+
+.modal-buy .red-btn {
+  left: 80px;
+}
+
+.modal-buy .white-btn {
+  margin: 0;
+  padding: 0;
+  display: block;
+  padding-top: 11px;
+  padding-bottom: 9px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  right: 80px;
 }

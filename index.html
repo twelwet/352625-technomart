@@ -118,16 +118,24 @@
         <h1 class="visually-hidden">Спецпредложения</h1>
         <div class="flex-wrapper">
           <div class="slider">
-            <div class="slides flex-wrapper">
-              <div class="slide puncher">
-                <h2>Перфораторы</h2>
-                <span>Настоящие мужские игрушки</span>
-                <a href="catalog.html" class="red-btn slider-btn">Открыть каталог</a>
-              </div>
-              <div class="slide drill visually-hidden">
-                <h2>Дрели</h2>
-                <span>Соседям на радость!</span>
-                <a href="#" class="red-btn slider-btn">Открыть каталог</a>
+            <input type="radio" id="btn-1" name="toggle" checked>
+            <input type="radio" id="btn-2" name="toggle">
+            <div class="slider-controls">
+              <label for="btn-1"></label>
+              <label for="btn-2"></label>
+            </div>
+            <div class="slider-inner">
+              <div class="slides">
+                <div class="slide puncher">
+                  <h2>Перфораторы</h2>
+                  <span>Настоящие мужские игрушки</span>
+                  <a href="catalog.html" class="red-btn slider-btn">Открыть каталог</a>
+                </div>
+                <div class="slide drill">
+                  <h2>Дрели</h2>
+                  <span>Соседям на радость!</span>
+                  <a href="#" class="red-btn slider-btn">Открыть каталог</a>
+                </div>
               </div>
             </div>
           </div>
