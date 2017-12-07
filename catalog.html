@@ -69,19 +69,23 @@
           </span>
         </div>
         <ul class="user-functions flex-wrapper">
-          <li class="logout">
-            <a href="#" class="user-functions-btn">
-              <svg class="user-icon" fill="rgb(197, 197, 197)" version="1.1" x="0px" y="0px" width="20px" height="18px" viewBox="0 0 20 18" enable-background="new 0 0 20 18" xml:space="preserve">
+          <li class="profile">
+            <a class="user-functions-btn" href="#">
+              <svg class="icon" fill="rgb(197, 197, 197)" version="1.1" x="0px" y="0px" width="20px" height="18px" viewBox="0 0 20 18" enable-background="new 0 0 20 18" xml:space="preserve">
                 <path d="M17.881,14.166c-2.144-0.735-4.256-1.666-5.207-2.39c-0.657-0.501-0.77-1.618-0.517-2.415
                   c1.118-0.903,1.864-2.477,1.864-4.278C14.021,2.276,12.221,0,10,0S5.979,2.276,5.979,5.083c0,1.801,0.746,3.374,1.863,4.277
                   c0.253,0.798,0.141,1.915-0.517,2.416c-0.95,0.724-3.063,1.654-5.207,2.39S0,18,0,18h20C20,18,20.025,14.901,17.881,14.166z"/>
               </svg>
-              <svg class="logout-icon" fill="rgb(197, 197, 197)" version="1.1" x="0px" y="0px" width="21px" height="17px" viewBox="0 0 21 17" enable-background="new 0 0 21 17" xml:space="preserve">
+              Равшан Джамшутович
+            </a>
+          </li>
+          <li class="logout">
+            <a class="user-functions-btn" href="#">
+              <svg class="icon" fill="rgb(197, 197, 197)" version="1.1" x="0px" y="0px" width="21px" height="17px" viewBox="0 0 21 17" enable-background="new 0 0 21 17" xml:space="preserve">
                 <polygon points="21,8.5 12.125,0 12.125,6 6.125,6 6.125,11 12.125,11 12.125,17"/>
                 <path d="M3.106,13.952V3.048c0.018-0.376,0.171-1.057,1.01-1.057h5.027V0H4.116C1.938,0,1.112,1.81,1.087,3.027
                   v10.946C1.112,15.189,1.938,17,4.116,17h5.027v-1.99H4.116C3.277,15.01,3.124,14.327,3.106,13.952z"/>
               </svg>
-              Равшан Джамшутович
             </a>
           </li>
           <li class="my-orders"><a href="#">Мои заказы</a></li>
@@ -103,18 +107,7 @@
     <main>
       <ul class="breadcrumbs container flex-wrapper">
         <li>
-          <a href="index.html">
-            <svg fill="rgb(193, 198, 206)" version="1.1" x="0px" y="0px" width="15px" height="12px" viewBox="0 0 15 12" enable-background="new 0 0 15 12" xml:space="preserve">
-            	<polygon points="3,8 3,12 7,12 7,8 9,8 9,12 13,12 13,8 8,3.516"/>
-            	<path d="M14.831,6.365L13,4.751V0h-2v2.987L8.332,0.635c-0.02-0.017-0.043-0.023-0.064-0.037
-            		c-0.026-0.018-0.052-0.035-0.08-0.047C8.156,0.539,8.125,0.533,8.093,0.527C8.062,0.521,8.032,0.515,8,0.515
-            		c-0.031,0-0.061,0.006-0.092,0.012C7.875,0.533,7.845,0.539,7.813,0.552C7.785,0.563,7.76,0.581,7.733,0.598
-            		c-0.021,0.014-0.045,0.02-0.064,0.037l-6.498,5.73C0.964,6.548,0.944,6.864,1.126,7.071C1.225,7.183,1.363,7.24,1.501,7.24
-            		c0.118,0,0.236-0.041,0.331-0.125L8,1.677l6.169,5.438C14.265,7.199,14.383,7.24,14.5,7.24c0.139,0,0.276-0.058,0.375-0.169
-            		C15.058,6.864,15.038,6.548,14.831,6.365z"/>
-            </svg>
-          </a>
-        </li>
+          <a class="home" href="index.html"></a></li>
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
         <li class="breadcrumbs-current"><a>Перфораторы</a></li>
@@ -196,8 +189,8 @@
             <li class="goods-item flex-wrapper">
               <div class="flag"></div>
               <div class="actions">
-                <a href="#" class="buy">Купить</a>
-                <a href="#" class="bookmark">В закладки</a>
+                <button class="buy">Купить</button>
+                <button class="bookmark">В закладки</button>
               </div>
               <img src="img/bosch-bfg-3000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 3000">
               <h2>Перфоратор BOSCH BFG 3000</h2>
@@ -207,8 +200,8 @@
             <li class="goods-item flex-wrapper">
               <div class="flag"></div>
               <div class="actions">
-                <a href="#" class="buy">Купить</a>
-                <a href="#" class="bookmark">В закладки</a>
+                <button class="buy">Купить</button>
+                <button class="bookmark">В закладки</button>
               </div>
               <img src="img/bosch-bfg-6000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 6000">
               <h2>Перфоратор BOSCH BFG 6000</h2>
@@ -218,8 +211,8 @@
             <li class="goods-item flex-wrapper">
               <div class="flag flag-new"></div>
               <div class="actions">
-                <a href="#" class="buy">Купить</a>
-                <a href="#" class="bookmark">В закладки</a>
+                <button class="buy">Купить</button>
+                <button class="bookmark">В закладки</button>
               </div>
               <img src="img/bosch-bfg-2000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 2000">
               <h2>Перфоратор BOSCH BFG 2000</h2>
@@ -229,8 +222,8 @@
             <li class="goods-item flex-wrapper">
               <div class="flag"></div>
               <div class="actions">
-                <a href="#" class="buy">Купить</a>
-                <a href="#" class="bookmark">В закладки</a>
+                <button class="buy">Купить</button>
+                <button class="bookmark">В закладки</button>
               </div>
               <img src="img/bosch-bfg-3000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 3000">
               <h2>Перфоратор BOSCH BFG 3000</h2>
@@ -240,8 +233,8 @@
             <li class="goods-item flex-wrapper">
               <div class="flag flag-new"></div>
               <div class="actions">
-                <a href="#" class="buy">Купить</a>
-                <a href="#" class="bookmark">В закладки</a>
+                <button class="buy">Купить</button>
+                <button class="bookmark">В закладки</button>
               </div>
               <img src="img/bosch-bfg-6000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 6000">
               <h2>Перфоратор BOSCH BFG 6000</h2>
@@ -251,8 +244,8 @@
             <li class="goods-item flex-wrapper">
               <div class="flag"></div>
               <div class="actions">
-                <a href="#" class="buy">Купить</a>
-                <a href="#" class="bookmark">В закладки</a>
+                <button class="buy">Купить</button>
+                <button class="bookmark">В закладки</button>
               </div>
               <img src="img/bosch-bfg-2000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 2000">
               <h2>Перфоратор BOSCH BFG 2000</h2>
@@ -262,8 +255,8 @@
             <li class="goods-item flex-wrapper">
               <div class="flag flag-new"></div>
               <div class="actions">
-                <a href="#" class="buy">Купить</a>
-                <a href="#" class="bookmark">В закладки</a>
+                <button class="buy">Купить</button>
+                <button class="bookmark">В закладки</button>
               </div>
               <img src="img/bosch-bfg-3000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 3000">
               <h2>Перфоратор BOSCH BFG 3000</h2>
@@ -273,8 +266,8 @@
             <li class="goods-item flex-wrapper">
               <div class="flag"></div>
               <div class="actions">
-                <a href="#" class="buy">Купить</a>
-                <a href="#" class="bookmark">В закладки</a>
+                <button class="buy">Купить</button>
+                <button class="bookmark">В закладки</button>
               </div>
               <img src="img/bosch-bfg-6000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 6000">
               <h2>Перфоратор BOSCH BFG 6000</h2>
@@ -284,8 +277,8 @@
             <li class="goods-item flex-wrapper">
               <div class="flag"></div>
               <div class="actions">
-                <a href="#" class="buy">Купить</a>
-                <a href="#" class="bookmark">В закладки</a>
+                <button class="buy">Купить</button>
+                <button class="bookmark">В закладки</button>
               </div>
               <img src="img/bosch-bfg-2000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 2000">
               <h2>Перфоратор BOSCH BFG 2000</h2>
@@ -371,4 +364,27 @@
       </div>
     </section>
   </body>
+  <script>
+    var buyOpenBtns = document.querySelectorAll(".goods-item .buy");
+    var buyPopup = document.querySelector(".modal-buy");
+    var buyCloseBtn = buyPopup.querySelector(".close");
+
+    for (var i = 0; (i <= (buyOpenBtns.length - 1)); i++) {
+      buyOpenBtns[i].addEventListener("click", function(evt) {
+          evt.preventDefault();
+          buyPopup.classList.remove("visually-hidden");
+      });
+    }
+
+    buyCloseBtn.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      buyPopup.classList.add("visually-hidden");
+    });
+
+    window.addEventListener("keydown", function(evt) {
+      if ((buyPopup.classList.contains("visually-hidden") === false) && (evt.keyCode === 27)) {
+        buyPopup.classList.add("visually-hidden");
+      }
+    });
+  </script>
 </html>

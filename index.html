@@ -71,7 +71,7 @@
         <ul class="user-functions flex-wrapper">
           <li class="login">
             <a href="#" class="user-functions-btn">
-              <svg fill="rgb(197, 197, 197)" version="1.1" x="0px" y="0px" width="20px" height="17px" viewBox="0 0 20 17" enable-background="new 0 0 20 17" xml:space="preserve">
+              <svg class="icon" fill="rgb(197, 197, 197)" version="1.1" x="0px" y="0px" width="20px" height="17px" viewBox="0 0 20 17" enable-background="new 0 0 20 17" xml:space="preserve">
                 <polygon points="14.875,8.5 6,0 6,6 0,6 0,11 6,11 6,17 	"/>
                 <path d="M16.986,15.01h-5.027V17h5.027c2.178,0,3.004-1.81,3.029-3.026V3.028C19.99,1.811,19.164,0,16.986,0h-5.027
                   v1.99h5.027c0.839,0,0.992,0.681,1.01,1.057v10.904C17.979,14.327,17.825,15.01,16.986,15.01z"/>
@@ -134,7 +134,7 @@
                 <div class="slide drill">
                   <h2>Дрели</h2>
                   <span>Соседям на радость!</span>
-                  <a href="#" class="red-btn slider-btn">Открыть каталог</a>
+                  <a href="catalog.html" class="red-btn slider-btn">Открыть каталог</a>
                 </div>
               </div>
             </div>
@@ -160,8 +160,8 @@
           <li class="goods-item flex-wrapper">
             <div class="flag"></div>
             <div class="actions">
-              <a href="#" class="buy">Купить</a>
-              <a href="#" class="bookmark">В закладки</a>
+              <button class="buy">Купить</button>
+              <button class="bookmark">В закладки</button>
             </div>
             <img src="img/bosch-bfg-9000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 9000">
             <h2>Перфоратор BOSCH BFG 9000</h2>
@@ -171,8 +171,8 @@
           <li class="goods-item flex-wrapper">
             <div class="flag"></div>
             <div class="actions">
-              <a href="#" class="buy">Купить</a>
-              <a href="#" class="bookmark">В закладки</a>
+              <button class="buy">Купить</button>
+              <button class="bookmark">В закладки</button>
             </div>
             <img src="img/bosch-bfg-3000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 3000">
             <h2>Перфоратор BOSCH BFG 3000</h2>
@@ -182,8 +182,8 @@
           <li class="goods-item flex-wrapper">
             <div class="flag"></div>
             <div class="actions">
-              <a href="#" class="buy">Купить</a>
-              <a href="#" class="bookmark">В закладки</a>
+              <button class="buy">Купить</button>
+              <button class="bookmark">В закладки</button>
             </div>
             <img src="img/bosch-bfg-6000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 6000">
             <h2>Перфоратор BOSCH BFG 6000</h2>
@@ -193,8 +193,8 @@
           <li class="goods-item flex-wrapper">
             <div class="flag flag-new"></div>
             <div class="actions">
-              <a href="#" class="buy">Купить</a>
-              <a href="#" class="bookmark">В закладки</a>
+              <button class="buy">Купить</button>
+              <button class="bookmark">В закладки</button>
             </div>
             <img src="img/bosch-bfg-2000.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 2000">
             <h2>Перфоратор BOSCH BFG 2000</h2>
@@ -309,8 +309,8 @@
             Вы можете забрать товар сами,<br>
             заехав в наш офис:
           </p>
-          <img src="img/map-mini.jpg" width="300" height="158" alt="Мини-карта">
-          <a href="#" class="red-btn">Заблудились? Напишите нам!</a>
+          <button class="map-btn"><img src="img/map-mini.jpg" width="300" height="158" alt="Мини-карта"></button>
+          <button class="red-btn feedback-btn">Заблудились? Напишите нам!</button>
         </div>
       </section>
     </main>
@@ -382,10 +382,82 @@
         <button class="red-btn" type="submit">Отправить</button>
       </form>
     </section>
-    <section class="modal modal-map visually-hidden">
+    <section class="modal modal-map flex-wrapper visually-hidden">
       <button class="close">Закрыть</button>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104370518!2d30.320889252265136!3d59.93879418178733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1512670016928" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
       <img src="img/map-modal.jpg" width="940" height="446" alt="Карта">
-      <!--тег <iframe>-->
+    </section>
+    <section class="modal modal-buy visually-hidden">
+      <button class="close">Закрыть</button>
+      <img src="img/icon-success-buy.png" width="66" height="66" alt="Товар добавлен в корзину">
+      <span>Товар добавлен в корзину!</span>
+      <div>
+        <a class="red-btn" href="#">Оформить заказ</a>
+        <a class="white-btn" href="#">Продолжить покупки</a>
+      </div>
     </section>
   </body>
+  <script>
+    var feedbackOpenBtn = document.querySelector(".feedback-btn");
+    var feedbackPopup = document.querySelector(".modal-feedback");
+    var feedbackCloseBtn = feedbackPopup.querySelector(".close");
+    var feedbackName = document.querySelector("[name=name]");
+    var mapOpenBtn = document.querySelector(".map-btn");
+    var mapPopup = document.querySelector(".modal-map");
+    var mapCloseBtn = mapPopup.querySelector(".close");
+    var buyOpenBtns = document.querySelectorAll(".goods-item .buy");
+    var buyPopup = document.querySelector(".modal-buy");
+    var buyCloseBtn = buyPopup.querySelector(".close");
+
+    feedbackOpenBtn.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      feedbackPopup.classList.remove("visually-hidden");
+      feedbackName.focus();
+    });
+
+    feedbackCloseBtn.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      feedbackPopup.classList.add("visually-hidden");
+    });
+
+    mapOpenBtn.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      mapPopup.classList.remove("visually-hidden");
+    });
+
+    mapCloseBtn.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      mapPopup.classList.add("visually-hidden");
+    });
+
+    for (var i = 0; (i <= (buyOpenBtns.length - 1)); i++) {
+      buyOpenBtns[i].addEventListener("click", function(evt) {
+          evt.preventDefault();
+          buyPopup.classList.remove("visually-hidden");
+      });
+    }
+
+    buyCloseBtn.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      buyPopup.classList.add("visually-hidden");
+    });
+
+    window.addEventListener("keydown", function(evt) {
+      if ((feedbackPopup.classList.contains("visually-hidden") === false) && (evt.keyCode === 27)) {
+        feedbackPopup.classList.add("visually-hidden");
+      }
+    });
+
+    window.addEventListener("keydown", function(evt) {
+      if ((mapPopup.classList.contains("visually-hidden") === false) && (evt.keyCode === 27)) {
+        mapPopup.classList.add("visually-hidden");
+      }
+    });
+
+    window.addEventListener("keydown", function(evt) {
+      if ((buyPopup.classList.contains("visually-hidden") === false) && (evt.keyCode === 27)) {
+        buyPopup.classList.add("visually-hidden");
+      }
+    });
+  </script>
 </html>
