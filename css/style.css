@@ -348,7 +348,6 @@ img {
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
-  color: rgb(50, 66, 92);
   text-decoration: underline;
 }
 
@@ -366,6 +365,11 @@ img {
   background-color: rgb(50, 66, 92);
   top: 7px;
   right: -18px;
+}
+
+.my-orders a,
+.account-info a {
+  color: rgb(50, 66, 92);
 }
 
 .account-info {
@@ -791,6 +795,7 @@ img {
   font-size: 13px;
   line-height: 13px;
   font-weight: 400;
+  color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
 }
 
