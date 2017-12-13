@@ -1343,7 +1343,7 @@ img {
 }
 
 .goods-item {
-
+  position: relative;
   flex-direction: column;
   min-height: 316px;
   font-family: 'PT Sans', 'Arial', sans-serif;
@@ -1846,6 +1846,8 @@ img {
 }
 
 .main-footer .contacts {
+  padding-top: 1px;
+  padding-left: 2px;
   width: 380px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 18px;
@@ -1880,8 +1882,8 @@ img {
 }
 
 .main-footer-navigation a {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 21px;
+  padding-bottom: 21px;
 }
 
 .main-footer-navigation a:hover,
