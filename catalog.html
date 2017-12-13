@@ -3,7 +3,8 @@
   <head>
     <meta charset='utf-8'>
     <title>Перфораторы - Компания «Техномарт»</title>
-    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href='css/normalize.css' rel='stylesheet' type='text/css'>
     <link href='css/style.css' rel='stylesheet' type='text/css'>
   </head>
@@ -153,11 +154,11 @@
             <span class='power-supply'>Питание:</span>
             <ul class='power-supply-filter'>
               <li>
-                <input type='radio' name='power-supply' id='battery-type' value='battery' checked>
+                <input type='radio' name='power-supply' id='battery-type' value='battery' checked disabled>
                 <label for='battery-type' tabindex='0'>Аккумуляторные</label>
               </li>
               <li>
-                <input type='radio' name='power-supply' id='wired-type' value='wired'>
+                <input type='radio' name='power-supply' id='wired-type' value='wired' disabled>
                 <label for='wired-type' tabindex='0'>Сетевые</label>
               </li>
             </ul>
@@ -168,11 +169,11 @@
           <section class='sort-by flex-wrapper'>
             <span class='sort'>Сортировка:</span>
             <div class='kind-of-sort flex-wrapper'>
-              <button class='sort-btn by-price' disabled>По цене</button>
-              <button class='sort-btn by-type'>По типу</button>
-              <button class='sort-btn by-functional'>По функционалу</button>
-              <button class='sort-direction up' disabled>По убыванию</button>
-              <button class='sort-direction down'>По возрастанию</button>
+              <a class='sort-btn by-price current'>По цене</a>
+              <a class='sort-btn by-type' href="#">По типу</a>
+              <a class='sort-btn by-functional' href="#">По функционалу</a>
+              <a class='sort-direction up current'>По убыванию</a>
+              <a class='sort-direction down' href="#">По возрастанию</a>
             </div>
           </section>
           <ul class='goods flex-wrapper'>

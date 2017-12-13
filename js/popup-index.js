@@ -10,7 +10,7 @@
   var feedbackName = feedbackForm.querySelector('[name=name]');
   var feedbackEmail = feedbackForm.querySelector('[name=email]');
   var feedbackMessage = feedbackForm.querySelector('[name=message]');
-  var mapOpenBtn = document.querySelector('.map-btn');
+  var mapOpenBtn = document.querySelector('.map-link');
   var mapPopup = document.querySelector('.modal-map');
   var mapCloseBtn = mapPopup.querySelector('.close');
   var buyOpenBtns = document.querySelectorAll('.goods-item .buy');

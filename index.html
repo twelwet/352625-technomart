@@ -3,7 +3,8 @@
   <head>
     <meta charset='utf-8'>
     <title>Главная - Компания «Техномарт»</title>
-    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href='css/normalize.css' rel='stylesheet' type='text/css'>
     <link href='css/style.css' rel='stylesheet' type='text/css'>
   </head>
@@ -108,8 +109,8 @@
         <h1 class='visually-hidden'>Спецпредложения</h1>
         <div class='flex-wrapper'>
           <div class='slider'>
-            <input type='radio' id='btn-1' name='toggle' checked>
-            <input type='radio' id='btn-2' name='toggle'>
+            <input class='radio-1' type='radio' id='btn-1' name='toggle' checked>
+            <input class='radio-2' type='radio' id='btn-2' name='toggle'>
             <div class='slider-controls'>
               <label for='btn-1'></label>
               <label for='btn-2'></label>
@@ -146,7 +147,7 @@
           <h1>Популярные товары</h1>
           <a href='#' class='red-btn catalog-btn'>Все популярные товары</a>
         </div>
-        <ul class='goods flex-wrapper'>
+        <ul class='popular-goods-list flex-wrapper'>
           <li class='goods-item flex-wrapper' tabindex='0'>
             <div class='flag'></div>
             <div class='actions'>
@@ -198,7 +199,7 @@
           <h1>Популярные производители</h1>
           <a href='#' class='red-btn catalog-btn'>Все производители</a>
         </div>
-        <ul class='vendors flex-wrapper'>
+        <ul class='popular-vendors-list flex-wrapper'>
           <li class='vendors-item flex-wrapper'>
             <h2 class='visually-hidden'>BOSCH</h2>
             <a class='flex-wrapper' href='#'><img src='img/vendor-bosch.png' width='126' height='37' alt='BOSCH'></a>
@@ -301,7 +302,7 @@
             Вы можете забрать товар сами,
             заехав в наш офис:
           </p>
-          <button class='map-btn'><img src='img/map-mini.jpg' width='300' height='158' alt='Мини-карта'></button>
+          <a class='map-link' href='https://www.google.ru/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.9384863,30.3220871,17.34z/data=!4m5!3m4!1s0x4696310fca5ba729:0xea9c53d4493c879f!8m2!3d59.9387942!4d30.3230833'><img src='img/map-mini.jpg' width='300' height='158' alt='Мини-карта'></a>
           <button class='red-btn feedback-btn'>Заблудились? Напишите нам!</button>
         </div>
       </section>
